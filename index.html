@@ -6,14 +6,17 @@
     <title>FunBarista</title>
     <link rel="stylesheet" href="./dist/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/FUN BARISTA (1).jpg" type="image/x-icon">
 </head>
 <body class="space-y-7 font-Poppins" style="background-color:  #3E2723; color: #F5F5DC; scroll-behavior: smooth;">
+    
 <!-- This is for the header and navbar -->
-    <div class="flex justify-evenly align-middle  h-16 sticky z-50" style="background-color: #3E2723;">
+<div class="flex justify-evenly items-center h-16 sticky z-50 bg-[#3E2723] md:w-14 md:border" id="header">
+
 
         <div class="flex justify-center items-center space-x-3">
             <a href="index.html" class=" w-80 flex flex-row space-x-2"> 
@@ -45,7 +48,7 @@
     <!-- for the overlapping div -->
      <div class=" h-40  flex justify-center items-center top-0 mt-0 ">
 
-        <div class=" top-8  h-40 w-2/5  z-10 flex justify-center items-center rounded z-3">
+        <div class=" top-8  h-40 w-2/5  z-10 flex justify-center items-center rounded z-3 md:text-red-300">
               <ul class="flex space-x-0 justify-evenly items-center h-40 w-full">
 
 
@@ -82,9 +85,9 @@
      </div>
 
     <!-- this is the about section -->
-    <div class=" h-screen  mt-2  flex flex-row justify-evenly items-center mb-20" id="about">
+    <div class=" h-screen  mt-2  flex flex-row justify-evenly items-center mb-20 sm:flex sm:flex-col sm:border-orange-500" id="about" >
         <!-- <h3>We are FunBarista Academy</h3> -->
-        <p class="flex justify-center items-center h-96 w-96 text-2xl overflow-hidden">
+        <p class=" border flex justify-center items-center h-96 w-96 text-2xl overflow-hidden " id="intro">
             We are a young and vibrant academy with the aim to teach and develop your skill and talent for the barista world. Our academy blends passion with expertise, offering hands-on training and certifications designed to prepare you for success. Whether you're a beginner or a professional, we provide the tools and knowledge to perfect your craft and thrive in the coffee industry.
           </p>
           
@@ -136,6 +139,12 @@
     <p>Get to apply for our intake and </p>
     <a href="./src/Application.html" class="justify-center items-center hover:underline">Apply<i class='bx bx-right-arrow-alt'></i></a>
 </div>
+<!-- 
+<div class="grid gap-8 md:grid-cols-2 md:items-center w-full">
+    <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="" class="w-16 rounded-lg">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ex quidem, commodi facilis minus magni beatae atque neque repudiandae veritatis tempora totam reiciendis doloremque cum maxime distinctio, dolor corrupti officia!</p>
+</div> -->
 <!-- footer and contact section -->
     <footer class="border-t-black bg-black text-white h-5/6 mt-20 ">
         <section class="flex space-x-10 justify-evenly items-center ">
