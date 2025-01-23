@@ -1,6 +1,35 @@
-@media screen and  (max-width: 360px)
+@media screen and  (max-width: 640px)
 {
    #header{
      border: 1px solid;
+     width: 50%;
+   }
+
+   #topLink{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: start;
+   }
+   #title{
+      display: none;
+   }
+
+   #logoImage{
+      size: 5px;
+   }
+
+   #heroImage{
+      width: 47%;
+      height: 400px
+
+   }
+
+   #welcome{
+      font-size: large;
+   }
+
+   #browseButton{
+      width: 150px;
    }
 }
