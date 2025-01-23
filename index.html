@@ -21,9 +21,9 @@
                 <h1 class="font-bold  flex justify-center items-center text-2xl">FunBarista Academy</h1></a>
             
     </div>
-       
+        <p><i class='bx bx-menu'></i></p>
         <!-- navbar -->
-        <nav class="flex w-96  justify-center items-center">
+        <nav class="flex w-96  justify-center items-center" id="nav">
             <ul class="flex space-x-6">
                 <li><a href="#about">About</a></li>
                 <li><a href="#courses" class="scroll-smooth">Programs</a></li>
@@ -33,7 +33,7 @@
         </nav>
     </div>
     <!-- Hero image -->
-    <div class="bg-cover mb-0 h-screen flex flex-col justify-center items-center space-y-4 relative" style="background-image: url(./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg); opacity: 0.8;">
+    <div class="bg-cover mb-0 h-screen flex flex-col justify-center items-center space-y-4 relative md:w-32 lg:w-48" style="background-image: url(./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg); opacity: 0.8;">
         <h1 class="text-5xl  flex justify-center" style="color: orange;"><strong>Welcome</strong></h1>
         <button class="flex justify-center items-center border-2 rounded-lg h-11 w-52 font-bold hover:scale-110 transition-transform duration-300 space-x-2">
             <a href="./src/courses.html" class="text-center">Browse Courses</a>
@@ -103,7 +103,7 @@
         <h3 class="text-5xl" style="color: orange;"><strong>What sets us apart?</strong></h3>
     <!-- featured courses -->
     <div class="border-x-orange-400 w-5/6 h- mt-5 mb-3 flex flex-row-reverse justify-between items-center space-x-10 rounded relative">
-        <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="seeds" class="h-72 w-72 rounded " id="seeds"> 
+        <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="Myseeds" class="h-72 w-72 rounded " id="seeds"> 
          <div class=" flex flex-col justify-center items-center  w-3/5 h-56 text-xl absolute right-60 z-30 bg-slate-50 text-orange-500" id="courses">
         <p class="flex text-wrap h-30 w-80 p-4 ">
             Get to learn from our experienced team
@@ -181,7 +181,12 @@
         <p><a href="#" class="hover:underline">Privacy Policy</a></p>
 
     </div>
+
+    <div>
+        <a href="#nav"><i class='bx bxs-up-arrow-alt'></i></a>
+    </div>
     </footer>
-    <script src="./src/script.js"></script>
+    
 </body>
+<script src="./src/script.js"></script>
 </html>
