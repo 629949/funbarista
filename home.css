@@ -32,4 +32,29 @@
    #browseButton{
       width: 150px;
    }
+
+   #firstMenuBox{
+      width: 47%;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #secondMenuBox{
+      width: 40%;
+      display: grid;
+   }
+
+   #about{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+   }
+
+   #intro{
+      font-size: small;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      text-wrap: wrap;
+   }
 }
