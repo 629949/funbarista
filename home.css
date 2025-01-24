@@ -1,8 +1,15 @@
 @media screen and  (max-width: 640px)
 {
+
+   body{
+      box-sizing: border-box;
+   }
    #header{
+      display: flex;
+      justify-content: start;
      border: 1px solid;
      width: 50%;
+     align-items: start;
    }
 
    #topLink{
@@ -56,5 +63,45 @@
       align-items: center;
       width: 80%;
       text-wrap: wrap;
+      line-height:20px;
+   }
+
+   #nav{
+      display: none;
+   }
+
+   #dropdown{
+   border: 1px solid;
+
+   }
+
+   #img{
+      width: 50%;
+   }
+
+   footer{
+      width: 50%;
+   }
+
+   #contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+   }
+
+   #copywrite{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #copywrite p a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
    }
 }
