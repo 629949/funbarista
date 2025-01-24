@@ -3,6 +3,10 @@
 
    body{
       box-sizing: border-box;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; */
    }
    #header{
       display: flex;
@@ -27,7 +31,7 @@
    }
 
    #heroImage{
-      width: 47%;
+      width: 50%;
       height: 400px
 
    }
@@ -41,13 +45,16 @@
    }
 
    #firstMenuBox{
-      width: 47%;
+      width: 50%;
       justify-content: center;
       align-items: center;
    }
 
    #secondMenuBox{
-      width: 40%;
+      width: 100%;
+      border: 1px solid;
+      height: 400px;
+      margin-bottom: 50px;
       display: grid;
    }
 
@@ -103,5 +110,9 @@
       justify-content: center;
       align-items: center;
      
+   }
+
+   #middleNav{
+      
    }
 }
