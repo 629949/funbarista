@@ -112,14 +112,25 @@ body {
   position: relative;
   opacity: 0.8;
 }
-
-#welcome {
+@media (width >= 320px) {
+  #heroImage {
+    border-radius: 12px;
+    height: 20rem;
+    width: 90%;
+  }
+}
+#heroImage #welcome {
   font-size: 3rem; /* text-5xl */
   color: orange;
   font-weight: 700; /* strong */
 }
-
-#browseButton {
+@media (width >= 320px) {
+  #heroImage #welcome {
+    font-size: 20px;
+    color: white;
+  }
+}
+#heroImage #browseButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,61 +141,70 @@ body {
   font-weight: 700; /* font-bold */
   transition: transform 0.3s; /* transition-transform duration-300 */
 }
-
-#browseButton:hover {
+@media (width >= 320px) {
+  #heroImage #browseButton {
+    width: 100px;
+    height: 20px;
+    font-size: 7px;
+    border-radius: 2px;
+    border: none;
+    background-color: orange;
+  }
+}
+#heroImage #browseButton a {
+  text-decoration: none;
+  color: black;
+}
+#heroImage #browseButton:hover {
   transform: scale(1.1); /* hover:scale-110 */
 }
 
 /* Overlapping Menu Box */
 #firstMenuBox {
-  height: 10rem; /* h-40 */
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
+  place-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-#secondMenuBox {
-  height: 10rem; /* h-40 */
-  width: 40%; /* w-2/5 */
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.375rem; /* rounded */
+@media (width >= 320px) {
+  #firstMenuBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    gap: 5px;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    place-items: center;
+  }
 }
-
-#secondMenuBox ul {
-  display: flex;
-  gap: 0; /* space-x-0 */
-  justify-content: space-evenly;
-  align-items: center;
-  height: 10rem; /* h-40 */
-  width: 100%;
-}
-
-#middleNav {
-  border: 1px solid;
-  height: 10rem; /* h-40 */
-  width: 8rem; /* w-32 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#firstMenuBox .numbers {
+  background-color: rgba(206, 206, 206, 0.037);
+  width: 150px;
+  border-radius: 5px;
   margin: 0;
-  transition: transform 0.3s; /* transition-transform duration-300 */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-
-#middleNav:hover {
-  background-color: #cbd5e1; /* hover:bg-slate-300 */
-  color: black; /* hover:text-black */
-  transform: scale(1.1); /* hover:scale-110 */
+@media (width >= 320px) {
+  #firstMenuBox .numbers {
+    width: 125px;
+  }
 }
-
-#middleNav img {
-  height: 5rem; /* h-20 */
+#firstMenuBox .numbers i {
+  font-size: 26px;
 }
-
+#firstMenuBox .numbers p {
+  font-style: italic;
+  color: gray;
+}
 /* About Section */
 #about {
   margin-top: 0.5rem; /* mt-2 */
