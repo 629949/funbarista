@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+  background-color: #3E2723;
+  color: #F5F5DC;
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 1.75rem; /* space-y-7 equivalent */
+  box-shadow: 10px 20px 110px 20px black inset;
+}
+
+/* Header and Navbar */
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+@media (width >= 320px) {
+  #header {
+    display: flex;
+    height: 60px;
+    width: 90%;
+    gap: 100px;
+  }
+}
+#header #topLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 12px;
+  width: 280px;
+}
+@media (width >= 320px) {
+  #header #topLink {
+    width: 20%;
+  }
+}
+#header #topLink h1 {
+  font-size: 20px;
+}
+@media (width >= 320px) {
+  #header #topLink h1 {
+    font-size: 10px;
+  }
+}
+#header #topLink img {
+  border-radius: 50%;
+  height: 30px;
+}
+@media (max-width: 320px) {
+  #header #topLink img {
+    height: 30px;
+  }
+}
+#header nav {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  width: auto;
+  gap: 10px;
+}
+#header nav ul li {
+  text-decoration: none;
+}
+#header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+#header nav ul li :hover {
+  border-bottom: 1px solid orange;
+  color: orange;
+  transition: transform 0.9s;
+}
+#header nav button {
+  display: none;
+}
+@media (max-width: 640px) {
+  #header nav {
+    display: none;
+  }
+}
+
+#title {
+  font-weight: 700; /* font-bold */
+  font-size: 1.5rem; /* text-2xl */
+}
+
+/* Hero Section */
+#heroImage {
+  background-size: cover;
+  margin-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* space-y-4 */
+  position: relative;
+  opacity: 0.8;
+}
+
+#welcome {
+  font-size: 3rem; /* text-5xl */
+  color: orange;
+  font-weight: 700; /* strong */
+}
+
+#browseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 0.5rem; /* rounded-lg */
+  height: 2.75rem; /* h-11 */
+  width: 13rem; /* w-52 */
+  font-weight: 700; /* font-bold */
+  transition: transform 0.3s; /* transition-transform duration-300 */
+}
+
+#browseButton:hover {
+  transform: scale(1.1); /* hover:scale-110 */
+}
+
+/* Overlapping Menu Box */
+#firstMenuBox {
+  height: 10rem; /* h-40 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+#secondMenuBox {
+  height: 10rem; /* h-40 */
+  width: 40%; /* w-2/5 */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem; /* rounded */
+}
+
+#secondMenuBox ul {
+  display: flex;
+  gap: 0; /* space-x-0 */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10rem; /* h-40 */
+  width: 100%;
+}
+
+#middleNav {
+  border: 1px solid;
+  height: 10rem; /* h-40 */
+  width: 8rem; /* w-32 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  transition: transform 0.3s; /* transition-transform duration-300 */
+}
+
+#middleNav:hover {
+  background-color: #cbd5e1; /* hover:bg-slate-300 */
+  color: black; /* hover:text-black */
+  transform: scale(1.1); /* hover:scale-110 */
+}
+
+#middleNav img {
+  height: 5rem; /* h-20 */
+}
+
+/* About Section */
+#about {
+  margin-top: 0.5rem; /* mt-2 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1.25rem; /* gap-5 */
+  align-items: center;
+  margin-bottom: 5rem; /* mb-20 */
+  border: 1px solid;
+}
+
+#intro {
+  height: 24rem; /* h-96 */
+  width: 24rem; /* w-96 */
+  font-size: 1.5rem; /* text-2xl */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+#imageGrid {
+  height: 75%; /* h-3/4 */
+  width: 24rem; /* w-96 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* gap-4 */
+  border-radius: 0.375rem; /* rounded */
+}
+
+#imageGrid img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Featured Courses */
+#courses {
+  background-color: #f8fafc; /* bg-slate-50 */
+  color: #f97316; /* text-orange-500 */
+  position: absolute;
+  right: 15rem; /* right-60 */
+  z-index: 30;
+  width: 60%; /* w-3/5 */
+  height: 14rem; /* h-56 */
+  font-size: 1.25rem; /* text-xl */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#courses p {
+  height: 7.5rem; /* h-30 */
+  width: 20rem; /* w-80 */
+  padding: 1rem; /* p-4 */
+  text-wrap: wrap;
+}
+
+/* Call to Action */
+#callToAction {
+  background-color: #cbd5e1; /* bg-slate-300 */
+  color: #f97316; /* text-orange-500 */
+  border-radius: 0.375rem; /* rounded */
+  width: 60%; /* w-3/5 */
+  height: 14rem; /* h-56 */
+  font-size: 1.25rem; /* text-xl */
+  left: 18rem; /* left-72 */
+  top: 3.5rem; /* top-14 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#callToAction p {
+  height: 7.5rem; /* h-30 */
+  width: 20rem; /* w-80 */
+  padding: 1rem; /* p-4 */
+  text-wrap: wrap;
+}
+
+#callToAction a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+  color: black; /* text-black */
+}
+
+#callToAction a:hover {
+  color: #ea580c; /* hover:text-orange-600 */
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid black; /* border-t-black */
+  background-color: black;
+  color: white;
+  height: 83.333333%; /* h-5/6 */
+  margin-top: 5rem; /* mt-20 */
+}
+
+#contact {
+  display: flex;
+  gap: 2.5rem; /* space-x-10 */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#copywrite {
+  background-color: #9ca3af; /* bg-gray-400 */
+  display: flex;
+  gap: 2.5rem; /* space-x-10 */
+  justify-content: center;
+  align-items: center;
+  height: 5rem; /* h-20 */
+}
+
+#copywrite a:hover {
+  text-decoration: underline; /* hover:underline */
+}/*# sourceMappingURL=style.css.map */

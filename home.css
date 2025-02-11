@@ -56,6 +56,10 @@
       height: 400px;
       margin-bottom: 50px;
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
    }
 
    #about{
@@ -113,6 +117,6 @@
    }
 
    #middleNav{
-      
+      size: 40%;
    }
 }

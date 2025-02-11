@@ -4,198 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FunBarista</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/FUN BARISTA (1).jpg" type="image/x-icon">
 </head>
-<body class="space-y-7 font-Poppins" style="background-color:  #3E2723; color: #F5F5DC; scroll-behavior: smooth;">
-    
-<!-- This is for the header and navbar -->
-<div class="flex justify-evenly items-center h-16 sticky z-50 bg-[#3E2723] md:w-14 md:border" id="header">
-
-
-        <div class="flex justify-center items-center space-x-3">
-            <a href="index.html" class=" w-80 flex flex-row space-x-2" id="topLink"> 
-                <img src="./images/FUN BARISTA (1).jpg" alt="logo" class="w-10 h-10 rounded-full" id="logoImage">
-                <h1 class="font-bold  flex justify-center items-center text-2xl" id="title">FunBarista Academy</h1></a>
-                <p id="dropdown"><i class='bx bx-menu'></i></p>
-    </div>
-       
-        <!-- navbar -->
-        <nav class="flex w-96  justify-center items-center" id="nav">
-            <ul class="flex space-x-6">
+<body>
+    <!-- Header and Navbar -->
+    <div id="header">
+        <div id="topLink">
+            <img src="./images/FUN BARISTA (1).jpg" alt="logo" id="logoImage">
+            <h1 id="title">FunBarista Academy</h1>
+        </div>
+        <nav id="nav">
+            <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#courses" class="scroll-smooth">Programs</a></li>
+                <li><a href="#courses">Programs</a></li>
                 <li><a href="#">Contact-Us</a></li>
                 <li><a href="#">More</a></li>
             </ul>
         </nav>
-    </div>
-    <!-- Hero image -->
-    <div class="bg-cover mb-0 h-screen flex flex-col justify-center items-center space-y-4 relative md:w-32 lg:w-48" style="background-image: url(./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg); opacity: 0.8;" id="heroImage">
-        <h1 id="welcome" class="text-5xl  flex justify-center" style="color: orange;"><strong>Welcome</strong></h1>
-        <button class="flex justify-center items-center border-2 rounded-lg h-11 w-52 font-bold hover:scale-110 transition-transform duration-300 space-x-2" id="browseButton">
-            <a href="./src/courses.html" class="text-center">Browse Courses</a>
-            <i class='bx bx-right-arrow-alt'></i>
-          </button>
-          
-    </div>
 
-    <!-- for the overlapping div -->
-     <div class=" h-40  flex justify-center items-center top-0 mt-0" id="firstMenuBox">
-
-        <div class=" top-8  h-40 w-2/5  z-10 flex justify-center items-center rounded z-3 md:text-red-300" id="secondMenuBox">
-              <ul class="flex space-x-0 justify-evenly items-center h-40 w-full">
-
-
-                <div class="border flex h-40 w-32 justify-center items-center hover:bg-slate-300 hover:text-black hover:scale-110 transition transform duration-300 flex-col m-0" id="middleNav">
-                    <img src="./images/notepad.svg
-                    " alt="notepad" class="h-20">
-                    <li class="flex justify-center items-center w-full"><a href="./src/Application.html" class="">Apply</a></li>
-                </div>
-
-
-                <div class="border flex flex-col h-40 justify-center items-center hover:scale-110 transition transform duration-300 m-0 w-32" id="middleNav">
-                    <img src="./images/book.svg" alt="book" class="h-16">
-                    <li><a href="./src/courses.html" class="">Courses</a></li>
-                </div>
-
-
-                <div class="border flex flex-col h-40 justify-center items-center hover:bg-slate-300 hover:text-black hover:scale-110 transition tranform duration-300 m-0 w-32" id="middleNav">
-                    <img src="./images/finance.svg" alt="cash" class="h-16">
-                     <li><a href="" class="">Donate</a></li>
-                    </div>
-
-
-                <div class="border flex flex-col h-40 justify-center items-center hover:scale-110 transition transform durantion-300 m-0 w-32" id="middleNav">
-                    <img src="./images/help.svg" alt="help">
-                     <li><a href="" class="">Inquiries</a></li>
-                    </div>
-                
-                
-               
-               
-              </ul>
-
-        </div>
-     </div>
-
-    <!-- this is the about section -->
-    <div class=" h-screen  mt-2  flex flex-row justify-evenly items-center mb-20 sm:flex sm:flex-col sm:border-orange-500" id="about" >
-        <!-- <h3>We are FunBarista Academy</h3> -->
-        <p class=" border flex justify-center items-center h-96 w-96 text-2xl overflow-hidden " id="intro">
-            We are a young and vibrant academy with the aim to teach and develop your skill and talent for the barista world. Our academy blends passion with expertise, offering hands-on training and certifications designed to prepare you for success. Whether you're a beginner or a professional, we provide the tools and knowledge to perfect your craft and thrive in the coffee industry.
-          </p>
-          
-          
-
-          <div class="grid grid-cols-2 gap-4 h-3/4 w-96 rounded" id="imageGrid">
-            <img src="./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg" alt="Coffee Image 1" class="col-span-2 h-full object-cover" id="img">
-            <img src="./images/nathan-dumlao-ikU3J1nr52w-unsplash.jpg" alt="Coffee Image 2" class="h-40 w-full object-cover col-span-1" id="img">
-            <img src="./images/siamak-z2PDbBmL4xE-unsplash.jpg" alt="Coffee Image 3" class="h-40 w-full object-cover" id="img">
-        </div>
-        
-    </div>
-
-   
-    <div class="flex justify-center items-center flex-col  space-y-10 mt-52 h-fit  relative" >
-        <h3 class="text-5xl" style="color: orange;"><strong>What sets us apart?</strong></h3>
-    <!-- featured courses -->
-    <div class="border-x-orange-400 w-5/6 h- mt-5 mb-3 flex flex-row-reverse justify-between items-center space-x-10 rounded relative">
-        <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="Myseeds" class="h-72 w-72 rounded " id="seeds"> 
-         <div class=" flex flex-col justify-center items-center  w-3/5 h-56 text-xl absolute right-60 z-30 bg-slate-50 text-orange-500" id="courses">
-        <p class="flex text-wrap h-30 w-80 p-4 ">
-            Get to learn from our experienced team
-            and teachers about the world of barista. We are here to ensure 
-            that you get the best to the bestest.</p>
-            <a href="#enrol" target="_blank">see more<i class='bx bx-right-arrow-alt'></i></a>
-    </div>
-</div>
-   
-
-    <!-- call to action -->
-    <div class="w-5/6 h- mt-5 mb-3 flex justify-between items-center space-x-10 flex-row rounded-xl relative ">
-        <img src="./images/siamak-z2PDbBmL4xE-unsplash.jpg" alt="cups" class="h-72 w-2/5 rounded">
-    <div class=" flex flex-col justify-center items-center bg-slate-300 rounded text-orange-500 w-3/5 h-56 text-xl absolute left-72 top-14">
-        <p class="flex text-wrap h-30 w-80 p-4 ">
-            Our Courses are friendly for all whether your a beginner, 
-            intermediate or your an expert. We are here to serve you and make your experience the best.</p>
-            <a href="./src/courses.html" class="flex items-center space-x-2 text-black hover:text-orange-600  ">
-                See more
-                <i class='bx bx-right-arrow-alt'></i>
-              </a>
-            </div>
-              
-    </div>
-</div>
-
-<div class=" flex flex-col justify-center items-center h-72">
-    <img src="./images/notepad.svg" alt="notepad" class="h-20">
-    <h4 class="text-3xl">We are accepting Applications</h4>
-    <p>Get to apply for our intake and </p>
-    <a href="./src/Application.html" class="justify-center items-center hover:underline">Apply<i class='bx bx-right-arrow-alt'></i></a>
-</div>
-<!-- 
-<div class="grid gap-8 md:grid-cols-2 md:items-center w-full">
-    <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="" class="w-16 rounded-lg">
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ex quidem, commodi facilis minus magni beatae atque neque repudiandae veritatis tempora totam reiciendis doloremque cum maxime distinctio, dolor corrupti officia!</p>
-</div> -->
-<!-- footer and contact section -->
-    <footer class="border-t-black bg-black text-white h-5/6 mt-20 ">
-        <section class="flex space-x-10 justify-evenly items-center " id="contact">
-
-        <div class="space-y-5">
-            <ul>
-                <li><a href="#contact">Contact-us</a></li>
-                <li><a href="#enrol">Enroll</a></li>
-                <li><a href="#">Our-Courses</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <ul>
-                <li><a href="#" class="hover:underline">funbaristaacademy@gmail.com</a></li>
-                <li><a href="#" class="hover:underline">+256 702942503</a></li>
-                <li><a href="#" class="hover:underline">+256 788135448</a></li>
-            </ul>
-        </div>
-        
-        <img src="./images/FUN BARISTA (1).jpg" alt="logo" class="w-60 h-52">
-
-        <div class="space-x-5  space-y-5">
-
-           <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank"><i class='bx bxl-tiktok' style="font-size: 2rem;"></i></a> 
-            <i class='bx bxl-facebook-circle ' style='color:#ffffff; font-size: 2rem;'></i>
-           <a href="https://www.instagram.com/fun_barista_coffee_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <i class='bx bxl-instagram' style="font-size: 2rem;"></i></a>
-           <a href="https://wa.me" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-            <i class='bx bxl-whatsapp text-4xl text-green-500 hover:text-green-700'></i>
-        </a>
-        <div class="flex space-x-2">
-            <img src="./images/location.svg" alt="">
-            <p>Bukoto-Kisaasi Road</p>
+        <div class="dropdown" id="menu">
+            <button><i class='bx bx-menu'></i></button>
             
         </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="heroImage" style="background-image: url(./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg);">
+        <h1 id="welcome">Welcome</h1>
+        <button id="browseButton">
+            <a href="./src/courses.html">Browse Courses</a>
+            <i class='bx bx-right-arrow-alt'></i>
+        </button>
+    </div>
+
+    <!-- Overlapping Menu Box -->
+    <div id="firstMenuBox">
+        <div id="secondMenuBox">
+            <ul>
+                <div id="middleNav">
+                    <img src="./images/notepad.svg" alt="notepad">
+                    <li><a href="./src/Application.html">Apply</a></li>
                 </div>
-
-              
-    </section>
-    <div class="bg-gray-400 flex space-x-10 justify-center items-center h-20" id="copywrite">
-        <p>2024 Copywrite FunBarista Academy </p>
-        <p><a href="#" class="hover:underline">Privacy Policy</a></p>
-
+                <div id="middleNav">
+                    <img src="./images/book.svg" alt="book">
+                    <li><a href="./src/courses.html">Courses</a></li>
+                </div>
+                <div id="middleNav">
+                    <img src="./images/finance.svg" alt="cash">
+                    <li><a href="#">Donate</a></li>
+                </div>
+                <div id="middleNav">
+                    <img src="./images/help.svg" alt="help">
+                    <li><a href="#">Inquiries</a></li>
+                </div>
+            </ul>
+        </div>
     </div>
 
+    <!-- About Section -->
+    <div id="about">
+        <p id="intro">Express yourself through creation</p>
+        <div id="imageGrid">
+            <img src="./images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg" alt="Coffee Image 1" id="img">
+            <img src="./images/nathan-dumlao-ikU3J1nr52w-unsplash.jpg" alt="Coffee Image 2" id="img">
+            <img src="./images/siamak-z2PDbBmL4xE-unsplash.jpg" alt="Coffee Image 3" id="img">
+        </div>
+    </div>
+
+    <!-- Featured Courses -->
     <div>
-        <a href="#nav"><i class='bx bxs-up-arrow-alt'></i></a>
+        <h3>What sets us apart?</h3>
+        <div>
+            <img src="./images/afrah-0x-_TV1zQFU-unsplash.jpg" alt="Myseeds" id="seeds">
+            <div id="courses">
+                <p>Get to learn from our experienced team and teachers about the world of barista. We are here to ensure that you get the best to the bestest.</p>
+                <a href="#enrol" target="_blank">See more<i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
     </div>
+
+    <!-- Call to Action -->
+    <div>
+        <img src="./images/siamak-z2PDbBmL4xE-unsplash.jpg" alt="cups">
+        <div id="callToAction">
+            <p>Our Courses are friendly for all whether you're a beginner, intermediate, or an expert. We are here to serve you and make your experience the best.</p>
+            <a href="./src/courses.html">See more<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <section id="contact">
+            <div>
+                <ul>
+                    <li><a href="#contact">Contact-us</a></li>
+                    <li><a href="#enrol">Enroll</a></li>
+                    <li><a href="#">Our-Courses</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">funbaristaacademy@gmail.com</a></li>
+                    <li><a href="#">+256 702942503</a></li>
+                    <li><a href="#">+256 788135448</a></li>
+                </ul>
+            </div>
+            <img src="./images/FUN BARISTA (1).jpg" alt="logo">
+            <div>
+                <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                <i class='bx bxl-facebook-circle'></i>
+                <a href="https://www.instagram.com/fun_barista_coffee_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <div>
+                    <img src="./images/location.svg" alt="">
+                    <p>Bukoto-Kisaasi Road</p>
+                </div>
+            </div>
+        </section>
+        <div id="copywrite">
+            <p>2024 Copywrite FunBarista Academy</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
+        <div>
+            <a href="#nav"><i class='bx bxs-up-arrow-alt'></i></a>
+        </div>
     </footer>
-    
 </body>
-<script src="./src/script.js"></script>
 </html>
