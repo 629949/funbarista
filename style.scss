@@ -24,7 +24,7 @@ body {
   align-items: center;
   width: 80%;
 
-  @media (width>= 320px){
+  @media (max-width: 320px){
     display: flex;
     height: 60px;
     width: 90%;
@@ -39,14 +39,14 @@ body {
     border-radius: 12px;
     width: 280px;
 
-    @media (width >= 320px) {
+    @media (max-width: 320px) {
        width: 20%;
     }
 
     h1{
         font-size: 20px;
 
-        @media (width >= 320px) {
+        @media (max-width: 320px) {
             font-size: 10px;
         }
     }
@@ -93,18 +93,39 @@ nav{
         }
     }
     
-    button{
-        display: none;
-    }
 
-    @media (max-width: 640px) {
+
+    @media (max-width: 320px) {
         display: none;
 
     }
 
+
+}
+
+
+.menuIcon{
+    display: none;
+
+    @media (max-width: 720px) {
+
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        position: relative;
+
+      
+        
+    }
+}
+
+.dropdown {
+    display: none;
 }
 
 }
+
+
 
 
 #title {
@@ -125,7 +146,7 @@ nav{
     position: relative;
     opacity: 0.8;
 
-    @media(width >= 320px){
+    @media(max-width:320px){
         border-radius: 12px;
         height: 20rem;
         width: 90%;
@@ -137,7 +158,7 @@ nav{
         color: orange;
         font-weight: 700; /* strong */
 
-        @media(width >= 320px){
+        @media(max-width: 320px){
             font-size: 20px;
             color: white;
         }
@@ -154,7 +175,7 @@ nav{
         font-weight: 700; /* font-bold */
         transition: transform 0.3s; /* transition-transform duration-300 */
 
-        @media(width>= 320px){
+        @media(max-width: 320px){
             width: 100px;
             height: 20px;
             font-size: 7px;
@@ -194,7 +215,7 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 
-    @media (width >= 320px) {
+    @media (max-width: 320px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-around;
@@ -218,7 +239,7 @@ nav{
        justify-content: space-around;
        align-items: center;
 
-       @media (width >= 320px)
+       @media (max-width: 320px)
        {
         width: 125px;
        }
@@ -232,7 +253,7 @@ nav{
         color: gray;
        }
 
-       @media (width>=320px) {
+       @media (max-width:320px) {
         
        }
     }
@@ -241,99 +262,120 @@ nav{
 }
 
 /* About Section */
-#about {
+#cards{
     margin-top: 0.5rem; /* mt-2 */
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-around;
     gap: 1.25rem; /* gap-5 */
     align-items: center;
     margin-bottom: 5rem; /* mb-20 */
-    border: 1px solid;
+
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(1, 1fr);
+        width: 250px;
+        margin:20px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: rgba(128, 128, 128, 0.022);
+    }
+
+    img{
+        width: 450px;
+
+        @media (max-width: 320px) {
+            width: 200px;
+            height: 125px;
+           
+        }
+
+    }
+
+    p{
+        text-align: center;
+        text-wrap: wrap;
+        font-style: italic;
+        font-weight: 100;
+    }
+
+    .card{
+        display: block;
+        text-align: center;
+       
+
+        @media (width: 320px) {
+
+           background-color: red;
+        }
+    }
+
+    button{
+        width: 100px;
+        display: block;
+        text-align: center;
+        
+        a{
+            text-decoration: none;
+            color:white;
+        }
+
+        @media (max-width: 320px) {
+            background-color: black;
+            border-radius: 5px;
+            font-size: 11px;
+            position: right;
+        }
+    }
 }
 
-#intro {
-    height: 24rem; /* h-96 */
-    width: 24rem; /* w-96 */
-    font-size: 1.5rem; /* text-2xl */
+.featured{
+
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    overflow: hidden;
-    margin: 0;
-}
+    height: auto;
+    padding: 15px;
+    gap: 10px;
 
-#imageGrid {
-    height: 75%; /* h-3/4 */
-    width: 24rem; /* w-96 */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; /* gap-4 */
-    border-radius: 0.375rem; /* rounded */
-}
+    @media  (max-width: 320px){
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-#imageGrid img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+        p{
+            font-size: 15px;
+            width: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+    }
 }
 
 /* Featured Courses */
 #courses {
-    background-color: #f8fafc; /* bg-slate-50 */
+    background-color: #f8fafc1e; /* bg-slate-50 */
     color: #f97316; /* text-orange-500 */
-    position: absolute;
-    right: 15rem; /* right-60 */
-    z-index: 30;
-    width: 60%; /* w-3/5 */
-    height: 14rem; /* h-56 */
-    font-size: 1.25rem; /* text-xl */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+
+    p {
+        height: 7.5rem; /* h-30 */
+        width: auto; /* w-80 */
+        padding: 1rem; /* p-4 */
+        text-wrap: wrap;
+    }
+    
 }
 
-#courses p {
-    height: 7.5rem; /* h-30 */
-    width: 20rem; /* w-80 */
-    padding: 1rem; /* p-4 */
-    text-wrap: wrap;
-}
 
-/* Call to Action */
-#callToAction {
-    background-color: #cbd5e1; /* bg-slate-300 */
-    color: #f97316; /* text-orange-500 */
-    border-radius: 0.375rem; /* rounded */
-    width: 60%; /* w-3/5 */
-    height: 14rem; /* h-56 */
-    font-size: 1.25rem; /* text-xl */
-    left: 18rem; /* left-72 */
-    top: 3.5rem; /* top-14 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#callToAction p {
-    height: 7.5rem; /* h-30 */
-    width: 20rem; /* w-80 */
-    padding: 1rem; /* p-4 */
-    text-wrap: wrap;
-}
-
-#callToAction a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* space-x-2 */
-    color: black; /* text-black */
-}
-
-#callToAction a:hover {
-    color: #ea580c; /* hover:text-orange-600 */
-}
 
 /* Footer */
 footer {
@@ -342,6 +384,15 @@ footer {
     color: white;
     height: 83.333333%; /* h-5/6 */
     margin-top: 5rem; /* mt-20 */
+
+    @media (max-width: 320px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 15px;
+    }
 }
 
 #contact {
@@ -349,15 +400,102 @@ footer {
     gap: 2.5rem; /* space-x-10 */
     justify-content: space-evenly;
     align-items: center;
+
+
+
+    @media (max-width: 320px) {
+        flex-direction: column;
+
+
+        img{
+            width: 120px
+        }
+
+        .leaf{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            
+        }
+
+        .call{
+            width: 130px;
+            height: 150px;
+            position: center;
+            
+            a{
+                font-size: 10px;
+            }
+        }
+
+      
+
+        ul{
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            align-items: center;
+            border: 1px solid whitesmoke;
+        }
+
+     
+
+    }
+
+    .call{
+        display: flex;
+      
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    li{
+        list-style: none;
+        
+    }
+
+    ul{
+      display: block;
+      text-align: center;
+    }
+
+    .socials{
+
+        @media (max-width: 320px) {
+            font-size: 30px;
+        }
+      
+            }
 }
+
+
 
 #copywrite {
     background-color: #9ca3af; /* bg-gray-400 */
     display: flex;
-    gap: 2.5rem; /* space-x-10 */
+    gap: 2px; /* space-x-10 */
     justify-content: center;
     align-items: center;
     height: 5rem; /* h-20 */
+    flex-direction: column;
+
+    @media (max-width: 320px) {
+        width: 100%;
+        padding: 20px;
+
+        p{
+            font-size: 12px;
+        }
+
+        .arrow{
+            display: none;
+        }
+    }
 }
 
 #copywrite a:hover {
