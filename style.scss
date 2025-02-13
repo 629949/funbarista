@@ -24,7 +24,7 @@ body {
   align-items: center;
   width: 80%;
 
-  @media (max-width: 320px){
+  @media (min-width: 320px){
     display: flex;
     height: 60px;
     width: 90%;
@@ -39,14 +39,14 @@ body {
     border-radius: 12px;
     width: 280px;
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
        width: 20%;
     }
 
     h1{
         font-size: 20px;
 
-        @media (max-width: 320px) {
+        @media (min-width: 320px) {
             font-size: 10px;
         }
     }
@@ -55,7 +55,7 @@ body {
         border-radius: 50%;
         height: 30px;
 
-        @media (max-width: 320px){
+        @media (min-width: 320px){
             height: 30px;
         }
     }
@@ -95,7 +95,7 @@ nav{
     
 
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         display: none;
 
     }
@@ -107,7 +107,7 @@ nav{
 .menuIcon{
     display: none;
 
-    @media (max-width: 720px) {
+    @media (min-width: 320px) {
 
         display: flex;
         flex-direction: column;
@@ -119,8 +119,9 @@ nav{
     }
 }
 
-.dropdown {
+.dropdown{
     display: none;
+
 }
 
 }
@@ -146,7 +147,7 @@ nav{
     position: relative;
     opacity: 0.8;
 
-    @media(max-width:320px){
+    @media(min-width:320px){
         border-radius: 12px;
         height: 20rem;
         width: 90%;
@@ -158,7 +159,7 @@ nav{
         color: orange;
         font-weight: 700; /* strong */
 
-        @media(max-width: 320px){
+        @media(min-width: 320px){
             font-size: 20px;
             color: white;
         }
@@ -175,7 +176,7 @@ nav{
         font-weight: 700; /* font-bold */
         transition: transform 0.3s; /* transition-transform duration-300 */
 
-        @media(max-width: 320px){
+        @media(min-width: 320px){
             width: 100px;
             height: 20px;
             font-size: 7px;
@@ -215,7 +216,7 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-around;
@@ -239,7 +240,7 @@ nav{
        justify-content: space-around;
        align-items: center;
 
-       @media (max-width: 320px)
+       @media (min-width: 320px)
        {
         width: 125px;
        }
@@ -253,7 +254,7 @@ nav{
         color: gray;
        }
 
-       @media (max-width:320px) {
+       @media (min-width:320px) {
         
        }
     }
@@ -271,7 +272,7 @@ nav{
     align-items: center;
     margin-bottom: 5rem; /* mb-20 */
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         grid-template-columns: repeat(1, 1fr);
         width: 250px;
         margin:20px;
@@ -283,7 +284,7 @@ nav{
     img{
         width: 450px;
 
-        @media (max-width: 320px) {
+        @media (min-width: 320px) {
             width: 200px;
             height: 125px;
            
@@ -319,7 +320,7 @@ nav{
             color:white;
         }
 
-        @media (max-width: 320px) {
+        @media (min-width: 320px) {
             background-color: black;
             border-radius: 5px;
             font-size: 11px;
@@ -337,7 +338,7 @@ nav{
     padding: 15px;
     gap: 10px;
 
-    @media  (max-width: 320px){
+    @media  (min-width: 320px){
         width: 90%;
         justify-content: center;
         align-items: center;
@@ -385,7 +386,7 @@ footer {
     height: 83.333333%; /* h-5/6 */
     margin-top: 5rem; /* mt-20 */
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -403,7 +404,7 @@ footer {
 
 
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         flex-direction: column;
 
 
@@ -466,7 +467,7 @@ footer {
 
     .socials{
 
-        @media (max-width: 320px) {
+        @media (min-width: 320px) {
             font-size: 30px;
         }
       
@@ -484,7 +485,7 @@ footer {
     height: 5rem; /* h-20 */
     flex-direction: column;
 
-    @media (max-width: 320px) {
+    @media (min-width: 320px) {
         width: 100%;
         padding: 20px;
 
