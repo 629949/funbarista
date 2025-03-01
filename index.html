@@ -29,8 +29,8 @@
             <img src="./images/FUN BARISTA (1).jpg" alt="logo" id="logoImage">
             <h1 id="title">FunBarista Academy</h1>
         </div>
-        <nav id="nav">
-            <ul>
+        <nav id="nav" >
+            <ul class="desktopmenu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#courses">Programs</a></li>
                 <li><a href="#contact">Contact-Us</a></li>
@@ -38,16 +38,15 @@
             </ul>
         </nav>
 
-        <div class="menuIcon" id="menu">
-            <button><i class='bx bx-menu'></i></button>
+        <div class="menuIcon" id="menu" >
+          <button class="menuButton">Menu  <i class="fa fa-caret-down" style="background-color: white;"></i></button>
             
-            <ul class="dropdown">
+            <ul class="dropdown" id="dropdownMenu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#courses">Programs</a></li>
                 <li><a href="#contact">Contact-us</a></li>
                 <li><a href="#">More</a></li>
             </ul>
-            
         </div>
 
 
@@ -66,9 +65,7 @@
     <div id="firstMenuBox">
 
        <div class="numbers">
-        <span class="material-symbols-outlined">
-            coffee_maker
-            </span>
+        <i class='bx bx-coffee-togo' style='color:#ede5e5'  ></i>
         <p>HandsOn </p>
        </div>
 
@@ -140,6 +137,7 @@
             <div class="leaf">
                 <div class="call">
                     <ul>
+                        <li style="font-size: 12px; color: orange; border-bottom: 1px solid orange;" >Quick Links</li>
                         <li><a href="#enrol">Enroll</a></li>
                         <li><a href="#">Our-Courses</a></li>
                         <li><a href="#">More</a></li>
@@ -147,6 +145,8 @@
                 </div>
                 <div class="call">
                     <ul>
+
+                        <li style="font-size: 12px; color: orange; border-bottom: 1px solid orange; width: 50px;">Contact</li>
                         <li><a href="#">funbaristaacademy@gmail.com</a></li>
                         <li><a href="#">+256 702942503</a></li>
                         <li><a href="#">+256 788135448</a></li>
@@ -154,7 +154,7 @@
                 </div>
             </div>
            
-            <img src="./images/FUN BARISTA (1).jpg" alt="logo">
+            <img class="logo" src="./images/FUN BARISTA (1).jpg" alt="logo">
             <div class="socials">
                 <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank"><i class='bx bxl-tiktok'></i></a>
                 <i class='bx bxl-facebook-circle'></i>

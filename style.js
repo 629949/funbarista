@@ -1,10 +1,7 @@
-let menuToggle = document.querySelector("#menu");
-let menu = document.querySelector(".dropdown");
+const menuButton = document.getElementById('menuButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
 
-
-console.log(menu);
-
-
-menuToggle.addEventListener("click", function(){
-    menu.classList.toggle('active');
-});
+menuButton.addEventListener("click", function(){
+    document.getElementById("menu").style.backgroundColor = "white";
+    console.log(menuButton)
+})
