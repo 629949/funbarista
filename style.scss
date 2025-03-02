@@ -31,6 +31,8 @@ body {
     gap: 100px;
   }
 
+}
+
 #topLink{
     display: flex;
     align-items: center;
@@ -71,6 +73,10 @@ body {
       gap: 10px;
       margin: 0;
       padding: 0;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
    
 
     }
@@ -94,9 +100,54 @@ body {
 
  
 .menuIcon{
-    display: flex;
+    display: none;
+    position: relative;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
+
+
+.menuButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
 }
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+    width: 150px;
+    padding: 10px 0;
+
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown li:hover {
+    background: #f0f0f0;
+}
+
 
 
 

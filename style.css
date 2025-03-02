@@ -29,7 +29,8 @@ body {
     gap: 100px;
   }
 }
-#header #topLink {
+
+#topLink {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,51 +39,101 @@ body {
   width: 280px;
 }
 @media (min-width: 320px) {
-  #header #topLink {
+  #topLink {
     width: 20%;
   }
 }
-#header #topLink h1 {
+#topLink h1 {
   font-size: 20px;
 }
 @media (min-width: 320px) {
-  #header #topLink h1 {
+  #topLink h1 {
     font-size: 10px;
   }
 }
-#header #topLink img {
+#topLink img {
   border-radius: 50%;
   height: 30px;
 }
 @media (min-width: 320px) {
-  #header #topLink img {
+  #topLink img {
     height: 30px;
   }
 }
-#header #nav {
+
+#nav {
   height: 30px;
   display: block;
 }
-#header #nav .desktopmenu {
+#nav .desktopmenu {
   display: flex;
   gap: 10px;
   margin: 0;
   padding: 0;
 }
-#header #nav li {
+@media (max-width: 768px) {
+  #nav .desktopmenu {
+    display: none;
+  }
+}
+#nav li {
   display: flex;
   list-style: none;
   justify-content: space-between;
   gap: 10px;
 }
-#header #nav a {
+#nav a {
   text-decoration: none;
   color: white;
   display: flex;
   gap: 10px;
 }
-#header .menuIcon {
-  display: flex;
+
+.menuIcon {
+  display: none;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style: none;
+  width: 150px;
+  padding: 10px 0;
+}
+
+.dropdown li {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown li:hover {
+  background: #f0f0f0;
 }
 
 #title {
