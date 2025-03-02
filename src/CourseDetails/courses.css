@@ -4,11 +4,13 @@ body {
 }
 
 table {
-  border: 1px solid white;
   width: 500px;
 }
 table th {
   border-bottom: 1px solid;
+}
+table td {
+  border-right: 1px solid;
 }
 
 .bullets {
