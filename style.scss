@@ -266,7 +266,6 @@ body {
     p{
         text-align: center;
         text-wrap: wrap;
-        font-style: italic;
         font-weight: 100;
     }
 
@@ -277,12 +276,13 @@ body {
 
         @media (width: 320px) {
 
-           background-color: red;
+           
         }
     }
 
     button{
         width: 100px;
+        height: 30px;
         display: block;
         text-align: center;
         
@@ -292,10 +292,12 @@ body {
         }
 
         @media (min-width: 320px) {
-            background-color: black;
-            border-radius: 5px;
+            background-color: rgb(159, 108, 13);
+
+            border-radius: 2px;
             font-size: 11px;
             position: right;
+            border: none;
         }
     }
 }
@@ -331,7 +333,7 @@ body {
 /* Featured Courses */
 #courses {
     background-color: #f8fafc1e; /* bg-slate-50 */
-    color: #f97316; /* text-orange-500 */
+    color: white; /* text-orange-500 */
     display: flex;
     flex-direction: column;
     justify-content: center;
