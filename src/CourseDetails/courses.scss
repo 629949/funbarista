@@ -1,12 +1,25 @@
 body{
     box-sizing: border-box;
+    color: white;
 }
 
 
 table{
     border: 1px solid white;
+    width: 500px;
+
+    th{
+        border-bottom: 1px solid;
+    }
 }
 
 .bullets{
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+
+    ul{
+        list-style: none;
+    }
 
 }

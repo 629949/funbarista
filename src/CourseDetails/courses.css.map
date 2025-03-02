@@ -1,1 +1,1 @@
-{"version":3,"sources":["courses.scss","courses.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;ACCJ;;ADGA;EACI,uBAAA;ACAJ","file":"courses.css"}
+{"version":3,"sources":["courses.scss","courses.css"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,YAAA;ACCJ;;ADGA;EACI,uBAAA;EACA,YAAA;ACAJ;ADEI;EACI,wBAAA;ACAR;;ADIA;EACI,uBAAA;EACA,kBAAA;EACA,YAAA;ACDJ;ADGI;EACI,gBAAA;ACDR","file":"courses.css"}

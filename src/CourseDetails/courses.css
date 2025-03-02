@@ -1,7 +1,21 @@
 body {
   box-sizing: border-box;
+  color: white;
 }
 
 table {
   border: 1px solid white;
+  width: 500px;
+}
+table th {
+  border-bottom: 1px solid;
+}
+
+.bullets {
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+.bullets ul {
+  list-style: none;
 }/*# sourceMappingURL=courses.css.map */
