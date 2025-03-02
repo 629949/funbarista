@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownMenu = document.getElementById("dropdownMenu");
 
     menuButton.addEventListener("click", function () {
-
-        console.log("menuButton clicked!")
         dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        dropdownMenu.style.marginRight = '30px';
 
         // console.log(dropdownMenu)
     });

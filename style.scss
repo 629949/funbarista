@@ -24,7 +24,7 @@ body {
   align-items: center;
   width: 80%;
 
-  @media (min-width: 320px){
+  @media (max-width: 768px){
     display: flex;
     height: 60px;
     width: 90%;
@@ -48,7 +48,9 @@ body {
     h1{
         font-size: 20px;
 
-        @media (min-width: 320px) {
+        @media (max-width: 768px) 
+            
+        {
             font-size: 10px;
         }
     }
@@ -57,7 +59,7 @@ body {
         border-radius: 50%;
         height: 30px;
 
-        @media (min-width: 320px){
+        @media (max-width: 768px){
             height: 30px;
         }
     }
@@ -169,7 +171,7 @@ body {
     position: relative;
     opacity: 0.8;
 
-    @media(min-width:320px){
+    @media(min-width:320px) {
         border-radius: 12px;
         height: 20rem;
         width: 90%;
@@ -178,10 +180,10 @@ body {
 
     #welcome {
         font-size: 3rem; /* text-5xl */
-        color: orange;
+        color: white;
         font-weight: 700; /* strong */
 
-        @media(min-width: 320px){
+        @media(max-width: 768px){
             font-size: 20px;
             color: white;
         }
@@ -198,7 +200,7 @@ body {
         font-weight: 700; /* font-bold */
         transition: transform 0.3s; /* transition-transform duration-300 */
 
-        @media(min-width: 320px){
+        @media(max-width: 768px){
             width: 100px;
             height: 20px;
             font-size: 7px;
@@ -207,6 +209,8 @@ body {
             background-color: orange;
         }
 
+
+        
         a{
             text-decoration: none;
             color: black;
@@ -228,17 +232,17 @@ body {
 
 /* Overlapping Menu Box */
 #firstMenuBox{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display:flex;
     width: 90%;
     height: auto;
     justify-content: center;
+    gap: 30px;
     align-items: center;
-    place-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     
 
-    @media (min-width: 320px) {
+    @media (max-width: 768px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-around;
@@ -276,9 +280,7 @@ body {
         color: gray;
        }
 
-       @media (min-width:320px) {
-        
-       }
+     
     }
 
 
@@ -293,8 +295,9 @@ body {
     gap: 1.25rem; /* gap-5 */
     align-items: center;
     margin-bottom: 5rem; /* mb-20 */
+    grid-template-columns: repeat(2, 1fr);
 
-    @media (min-width: 320px) {
+    @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
         width: 250px;
         margin:20px;
@@ -305,6 +308,7 @@ body {
 
     img{
         width: 450px;
+        border-radius: 5px;
 
         @media (min-width: 320px) {
             width: 200px;
