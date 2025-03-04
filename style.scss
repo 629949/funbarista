@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-color: #3E2723;
+    background-color: white ;
     color: #F5F5DC;
     scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -20,14 +20,20 @@ body {
 /* Header and Navbar */
 #header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  padding: 20px;
+  height: 60px;
+  color: black;
+
 
   @media (max-width: 768px){
     display: flex;
     height: 60px;
-    width: 90%;
+    width: 100%;
     gap: 100px;
   }
 
@@ -40,13 +46,14 @@ body {
     gap: 5px;
     border-radius: 12px;
     width: 280px;
+   
 
     @media (min-width: 320px) {
        width: 20%;
     }
 
     h1{
-        font-size: 20px;
+        font-size: 15px;
 
         @media (max-width: 768px) 
             
@@ -66,15 +73,22 @@ body {
 }
 
 #nav{
+    
     height: 30px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    
  
 
     .desktopmenu{
       display: flex;
-      gap: 10px;
+      gap: 45px;
       margin: 0;
       padding: 0;
+      justify-content: center;
+      align-items: center;
 
       @media (max-width: 768px) {
         display: none;
@@ -84,18 +98,17 @@ body {
     }
 
         li{
-            display: flex;
             list-style: none;
-            justify-content: space-between;
-            gap: 10px;
+            
           
         }
 
         a{
             text-decoration: none;
-            color: white;
+            color: black;
             display: flex;
-            gap: 10px;
+            align-items: center;
+        
         }
    
 }
@@ -112,7 +125,7 @@ body {
 
 
 .menuButton{
-    background: none;
+    background-color: rgba(255, 255, 255, 0.214);
     border: none;
     cursor: pointer;
     height: 20px;
@@ -162,16 +175,19 @@ body {
 #heroImage {
     background-size: cover;
     margin-bottom: 0;
-    height: 100vh;
+    height: 500px;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 1rem; /* space-y-4 */
-    position: relative;
-    opacity: 0.8;
+    ;
+    opacity: 1;
+    border-radius: 12px;
 
-    @media(min-width:320px) {
+
+    @media(max-width: 768px) {
         border-radius: 12px;
         height: 20rem;
         width: 90%;
@@ -179,10 +195,14 @@ body {
     }
 
     #welcome {
-        font-size: 3rem; /* text-5xl */
+        font-size: 20px; /* text-5xl */
         color: white;
         font-weight: 700; /* strong */
+        width: 80%;
 
+        em{
+            font-size: 30px;
+        }
         @media(max-width: 768px){
             font-size: 20px;
             color: white;
@@ -296,8 +316,9 @@ body {
     align-items: center;
     margin-bottom: 5rem; /* mb-20 */
     grid-template-columns: repeat(2, 1fr);
-    background-color: #21242927;
-    width: 80%;
+    background-color: #21242979;
+    width: 100%;
+    color: black;
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
@@ -324,43 +345,59 @@ body {
     p{
         text-align: center;
         text-wrap: wrap;
-        font-weight: 600;
+        font-weight: 400;
         height: 170px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 350px;
+        color: black;
+        margin: 0;
+        padding: 0;
 
         @media (max-width: 768px){
             width: 200px;
             font-weight: 400;
         }
+
+       
     }
 
-    #lastCard{
-        grid-column: span 2;
 
-      @media (max-width: 768px) {
-        grid-column: span 1;
-      }
-    }
+
+    // #lastCard{
+    //     grid-column: span 2;
+
+    //   @media (max-width: 768px) {
+    //     grid-column: span 1;
+    //   }
+    // }
     .card{
        display: flex;
        justify-content: center;
        align-items: center;
        flex-direction: column;
+       margin: 0;
+       padding: 0;
 
         @media (width: 320px) {
 
            
         }
+
+        h4{
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+        }
     }
 
-    button{
+    #browseButton{
         width: 150px;
         height: 30px;
         display: block;
         text-align: center;
+        place-items: right;
         
         a{
             text-decoration: none;
@@ -392,9 +429,11 @@ body {
 
     @media (max-width: 768px){
         width: 90%;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
+        height: 60rem;
+
 
         a{
             text-decoration: none;
@@ -413,6 +452,13 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    height: auto;
+
+    @media (max-screen: 768px) {
+        height: 30rem;
+    }
+
+
 
     p {
         height: 7.5rem; /* h-30 */
@@ -422,6 +468,15 @@ body {
     }
     
 }
+
+#seeMore{
+    background-color: orange;
+    width: 90px;
+    height: 25px;
+    color: white;
+    border-radius: 5px;
+}
+
 
 
 

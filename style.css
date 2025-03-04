@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  background-color: #3E2723;
+  background-color: white;
   color: #F5F5DC;
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -17,15 +17,20 @@ body {
 /* Header and Navbar */
 #header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  padding: 20px;
+  height: 60px;
+  color: black;
 }
 @media (max-width: 768px) {
   #header {
     display: flex;
     height: 60px;
-    width: 90%;
+    width: 100%;
     gap: 100px;
   }
 }
@@ -44,7 +49,7 @@ body {
   }
 }
 #topLink h1 {
-  font-size: 20px;
+  font-size: 15px;
 }
 @media (max-width: 768px) {
   #topLink h1 {
@@ -63,13 +68,18 @@ body {
 
 #nav {
   height: 30px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
 }
 #nav .desktopmenu {
   display: flex;
-  gap: 10px;
+  gap: 45px;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   #nav .desktopmenu {
@@ -77,16 +87,13 @@ body {
   }
 }
 #nav li {
-  display: flex;
   list-style: none;
-  justify-content: space-between;
-  gap: 10px;
 }
 #nav a {
   text-decoration: none;
-  color: white;
+  color: black;
   display: flex;
-  gap: 10px;
+  align-items: center;
 }
 
 .menuIcon {
@@ -100,7 +107,7 @@ body {
 }
 
 .menuButton {
-  background: none;
+  background-color: rgba(255, 255, 255, 0.214);
   border: none;
   cursor: pointer;
   height: 20px;
@@ -144,16 +151,17 @@ body {
 #heroImage {
   background-size: cover;
   margin-bottom: 0;
-  height: 100vh;
+  height: 500px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1rem; /* space-y-4 */
-  position: relative;
-  opacity: 0.8;
+  opacity: 1;
+  border-radius: 12px;
 }
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   #heroImage {
     border-radius: 12px;
     height: 20rem;
@@ -161,9 +169,13 @@ body {
   }
 }
 #heroImage #welcome {
-  font-size: 3rem; /* text-5xl */
+  font-size: 20px; /* text-5xl */
   color: white;
   font-weight: 700; /* strong */
+  width: 80%;
+}
+#heroImage #welcome em {
+  font-size: 30px;
 }
 @media (max-width: 768px) {
   #heroImage #welcome {
@@ -256,8 +268,9 @@ body {
   align-items: center;
   margin-bottom: 5rem; /* mb-20 */
   grid-template-columns: repeat(2, 1fr);
-  background-color: rgba(33, 36, 41, 0.1529411765);
-  width: 80%;
+  background-color: rgba(33, 36, 41, 0.4745098039);
+  width: 100%;
+  color: black;
 }
 @media (max-width: 768px) {
   #cards {
@@ -283,12 +296,15 @@ body {
 #cards p {
   text-align: center;
   text-wrap: wrap;
-  font-weight: 600;
+  font-weight: 400;
   height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 350px;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 768px) {
   #cards p {
@@ -296,33 +312,33 @@ body {
     font-weight: 400;
   }
 }
-#cards #lastCard {
-  grid-column: span 2;
-}
-@media (max-width: 768px) {
-  #cards #lastCard {
-    grid-column: span 1;
-  }
-}
 #cards .card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
-#cards button {
+#cards .card h4 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+#cards #browseButton {
   width: 150px;
   height: 30px;
   display: block;
   text-align: center;
+  place-items: right;
 }
-#cards button a {
+#cards #browseButton a {
   text-decoration: none;
   color: black;
   font-size: 15px;
 }
 @media (max-width: 768px) {
-  #cards button {
+  #cards #browseButton {
     background-color: rgb(159, 108, 13);
     border-radius: 2px;
     font-size: 11px;
@@ -345,9 +361,10 @@ body {
 @media (max-width: 768px) {
   .featured {
     width: 90%;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    height: 60rem;
   }
   .featured a {
     text-decoration: none;
@@ -365,12 +382,26 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
+  height: auto;
+}
+@media (max-screen: 768px) {
+  #courses {
+    height: 30rem;
+  }
 }
 #courses p {
   height: 7.5rem; /* h-30 */
   width: auto; /* w-80 */
   padding: 1rem; /* p-4 */
   text-wrap: wrap;
+}
+
+#seeMore {
+  background-color: orange;
+  width: 90px;
+  height: 25px;
+  color: white;
+  border-radius: 5px;
 }
 
 /* Footer */
