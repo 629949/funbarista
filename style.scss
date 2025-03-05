@@ -24,7 +24,7 @@ body {
   align-items: center;
   width: 97%;
   background-color: white;
-  position: sticky;
+  position: relative;
   padding: 20px;
   height: 60px;
   color: black;
@@ -142,13 +142,16 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    // left:inherit;
+    right: 0;
     background: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     list-style: none;
-    width: 200px;
+    max-width: 100vw;
+    overflow-x: hidden ;
+    z-index: 999;
     padding: 10px 0;
+   
 
 }
 
@@ -161,6 +164,7 @@ body {
     text-decoration: none;
     color: #333;
     display: block;
+    border-bottom: 1px solid black;
 }
 
 .dropdown li:hover {
@@ -188,13 +192,15 @@ body {
     gap: 1rem; /* space-y-4 */
     opacity: 0.8;
     border-radius: 12px;
-
+    position: relative;
+    z-index: 1;
 
     @media(max-width: 768px) {
 
         border-radius: 12px;
         height: 20rem;
         width: 90%;
+        z-index: 1;
         
     }
 
