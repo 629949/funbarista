@@ -18,3 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+let background = document.querySelector('color');
+
+background.addEventListener("click", function(){
+    document.querySelector('#body').style.backgroundColor = 'black';
+})

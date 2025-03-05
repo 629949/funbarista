@@ -14,19 +14,27 @@ body {
 /* Header and Navbar */
 #header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 97%;
+  background-color: white;
+  position: sticky;
+  padding: 20px;
+  height: 60px;
+  color: black;
 }
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   #header {
     display: flex;
-    height: 60px;
-    width: 90%;
+    height: 20px;
+    width: 87%;
     gap: 100px;
+    background-color: transparent;
+    justify-content: space-around;
   }
 }
-#header #topLink {
+
+#topLink {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,51 +43,102 @@ body {
   width: 280px;
 }
 @media (min-width: 320px) {
-  #header #topLink {
+  #topLink {
     width: 20%;
   }
 }
-#header #topLink h1 {
-  font-size: 20px;
+#topLink h1 {
+  font-size: 15px;
 }
-@media (min-width: 320px) {
-  #header #topLink h1 {
-    font-size: 10px;
+@media (max-width: 768px) {
+  #topLink h1 {
+    display: none;
   }
 }
-#header #topLink img {
+#topLink img {
   border-radius: 50%;
   height: 30px;
 }
-@media (min-width: 320px) {
-  #header #topLink img {
+@media (max-width: 768px) {
+  #topLink img {
     height: 30px;
   }
 }
-#header #nav {
+
+#nav {
   height: 30px;
-  display: block;
-}
-#header #nav .desktopmenu {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+}
+#nav .desktopmenu {
+  display: flex;
+  gap: 45px;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
-#header #nav li {
-  display: flex;
+@media (max-width: 768px) {
+  #nav .desktopmenu {
+    display: none;
+  }
+}
+#nav li {
   list-style: none;
-  justify-content: space-between;
-  gap: 10px;
 }
-#header #nav a {
+#nav a {
   text-decoration: none;
-  color: white;
+  color: black;
   display: flex;
-  gap: 10px;
+  align-items: center;
 }
-#header .menuIcon {
-  display: flex;
+
+.menuIcon {
+  display: none;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+}
+
+.menuButton {
+  background-color: rgba(255, 255, 255, 0.214);
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style: none;
+  width: 200px;
+  padding: 10px 0;
+}
+
+.dropdown li {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown li:hover {
+  background: #f0f0f0;
 }
 
 #title {
@@ -90,16 +149,17 @@ body {
 #heroImage {
   background-size: cover;
   margin-bottom: 0;
-  height: 100vh;
+  height: 500px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem; /* space-y-4 */
-  position: relative;
   opacity: 0.8;
+  border-radius: 12px;
 }
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   #heroImage {
     border-radius: 12px;
     height: 20rem;
@@ -107,13 +167,22 @@ body {
   }
 }
 #heroImage #welcome {
-  font-size: 3rem; /* text-5xl */
-  color: orange;
+  font-size: 20px; /* text-5xl */
+  color: white;
   font-weight: 700; /* strong */
+  width: 80%;
 }
-@media (min-width: 320px) {
-  #heroImage #welcome {
+#heroImage #welcome em {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  #heroImage #welcome em {
     font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  #heroImage #welcome {
+    font-size: 5px;
     color: white;
   }
 }
@@ -121,14 +190,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid;
+  border: none;
   border-radius: 0.5rem; /* rounded-lg */
   height: 2.75rem; /* h-11 */
   width: 13rem; /* w-52 */
   font-weight: 700; /* font-bold */
   transition: transform 0.3s; /* transition-transform duration-300 */
 }
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   #heroImage #browseButton {
     width: 100px;
     height: 20px;
@@ -171,30 +240,28 @@ body {
   list-style: none;
 }
 
-table {
-  width: 500px;
+#table {
+  width: 700px;
 }
 @media (max-width: 786px) {
-  table {
+  #table {
     width: 255px;
     font-size: 13px;
   }
 }
-table th {
+#table th {
   border-bottom: 1px solid;
 }
-table td {
+#table td {
   border-right: 1px solid;
 }
 
 /* Footer */
 footer {
   border-top: 1px solid black; /* border-t-black */
-  background-color: black;
   color: white;
   height: 83.333333%; /* h-5/6 */
   margin-top: 5rem; /* mt-20 */
-  width: 100%;
 }
 @media (min-width: 320px) {
   footer {
@@ -268,7 +335,7 @@ footer {
 }
 
 #copywrite {
-  background-color: #9ca3af; /* bg-gray-400 */
+  background-color: transparent; /* bg-gray-400 */
   display: flex;
   gap: 2px; /* space-x-10 */
   justify-content: center;
