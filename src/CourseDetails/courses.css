@@ -124,6 +124,7 @@ body {
   list-style: none;
   width: 200px;
   padding: 10px 0;
+  z-index: 99;
 }
 
 .dropdown li {
@@ -196,6 +197,7 @@ body {
   width: 13rem; /* w-52 */
   font-weight: 700; /* font-bold */
   transition: transform 0.3s; /* transition-transform duration-300 */
+  margin-top: 15px;
 }
 @media (max-width: 768px) {
   #heroImage #browseButton {
