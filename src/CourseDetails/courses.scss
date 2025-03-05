@@ -252,6 +252,63 @@ body{
     
 }
 
+#firstMenuBox{
+    display:flex;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+
+    
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+        gap: 5px;
+        align-items: center;
+        height: auto;
+        width: 90%;
+        place-items: center;
+       
+
+    }
+
+    .numbers{   
+        background-color: rgba(206, 206, 206, 0.197);
+       width: 150px;
+       border-radius: 5px;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+
+       @media (min-width: 320px)
+       {
+        width: 125px;
+       }
+
+       i{
+        font-size: 26px;
+       }
+
+       p{
+        font-style: italic;
+        color: gray;
+       }
+
+     
+    }
+
+
+}
+
+
 
 // for the highlights 
 .highlights{

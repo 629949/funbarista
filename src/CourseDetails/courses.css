@@ -215,6 +215,52 @@ body {
   transform: scale(1.1); /* hover:scale-110 */
 }
 
+#firstMenuBox {
+  display: flex;
+  width: 90%;
+  height: auto;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  #firstMenuBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    gap: 5px;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    place-items: center;
+  }
+}
+#firstMenuBox .numbers {
+  background-color: rgba(206, 206, 206, 0.197);
+  width: 150px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 320px) {
+  #firstMenuBox .numbers {
+    width: 125px;
+  }
+}
+#firstMenuBox .numbers i {
+  font-size: 26px;
+}
+#firstMenuBox .numbers p {
+  font-style: italic;
+  color: gray;
+}
+
 .highlights {
   display: flex;
   width: 100%;
