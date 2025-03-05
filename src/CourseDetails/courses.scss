@@ -6,7 +6,7 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 10px 20px 110px 20px black inset ;
+    box-shadow: 1px 20px 110px 20px black inset ;
     margin: 0;
     padding: 0;
 }
@@ -347,12 +347,16 @@ body{
 
 #table{
    
-    
-    width: 700px;
+    background-color: #5F3C35;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 786px) {
     
-     width: 255px;
+     width: 100%;
      font-size: 13px;
       
     
@@ -368,6 +372,12 @@ body{
 
 }
 
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
@@ -376,7 +386,7 @@ body{
 footer {
     border-top: 1px solid black; /* border-t-black */
     color: white;
-    height: 83.333333%; /* h-5/6 */
+    height: 300px; /* h-5/6 */
     margin-top: 5rem; /* mt-20 */
 
     @media (min-width: 320px) {
@@ -392,6 +402,10 @@ footer {
 #contact{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 
     @media (min-width: 320px) {
         align-items: center;
@@ -402,7 +416,13 @@ footer {
 
 .leaf{
     display: flex;
-  
+    justify-content: center;
+  height: 10rem;
+  width: 40rem;
+  flex-direction: row;
+  margin-top: 50px;
+  align-items: center;
+ 
 
     @media (min-width: 320px) {
         width: 100%;
@@ -414,6 +434,8 @@ footer {
 .call{
 
     display: flex;
+    font-size: 15px;
+    flex-direction: column;
     @media (min-width:320px) {
         font-size: 10px;
   
@@ -441,7 +463,14 @@ footer {
 }
     .socials{
         display: flex;
+        width: 250px;
+        justify-content: space-around;
+        align-items: center;
 
+        i{
+            color: white;
+            font-size: 35px;
+        }
 
         @media (min-width: 320px) {
             font-size: 25px;
@@ -465,6 +494,7 @@ footer {
     align-items: center;
     height: 5rem; /* h-20 */
     flex-direction: column;
+    border-top: 1px solid;
 
     @media (min-width: 320px) {
         width: 100%;

@@ -34,7 +34,7 @@ body {
     display: flex;
     height: 20px;
     width:87%;
-    gap: 100px;
+    gap: 70px;
     background-color: transparent;
     justify-content: space-around;
 
@@ -561,7 +561,7 @@ body {
 footer {
     border-top: 1px solid black; /* border-t-black */
     color: white;
-    height: 83.333333%; /* h-5/6 */
+    height: 300px; /* h-5/6 */
     margin-top: 5rem; /* mt-20 */
 
     @media (min-width: 320px) {
@@ -577,6 +577,10 @@ footer {
 #contact{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 
     @media (min-width: 320px) {
         align-items: center;
@@ -587,7 +591,12 @@ footer {
 
 .leaf{
     display: flex;
-  
+    justify-content: center;
+  height: 10rem;
+  width: 40rem;
+  flex-direction: row;
+  margin-top: 50px;
+  align-items: center;
 
     @media (min-width: 320px) {
         width: 100%;
@@ -599,10 +608,12 @@ footer {
 .call{
 
     display: flex;
+    font-size: 15px;
+    flex-direction: column;
     @media (min-width:320px) {
         font-size: 10px;
   
-        width: auto;
+        width: 250px;
     }
 
     ul{
@@ -626,7 +637,14 @@ footer {
 }
     .socials{
         display: flex;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
 
+        i{
+            color: white;
+            font-size: 35px;
+        }
 
         @media (min-width: 320px) {
             font-size: 25px;
