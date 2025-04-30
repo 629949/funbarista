@@ -16,12 +16,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 97%;
+  width: 100%;
   background-color: white;
   position: sticky;
   z-index: 1000;
   top: 0;
-  padding: 10px;
   height: 60px;
   color: black;
 }
@@ -176,10 +175,13 @@ body {
   }
 }
 #heroImage #welcome {
-  font-size: 20px; /* text-5xl */
+  font-size: 30px; /* text-5xl */
   color: white;
-  font-weight: 700; /* strong */
+  font-weight: bolder; /* strong */
   width: 80%;
+  display: flex;
+  justify-content: center;
+  color: black;
 }
 #heroImage #welcome em {
   font-size: 30px;
@@ -296,9 +298,105 @@ body {
   list-style: none;
 }
 
+#cards {
+  /* mt-2 */
+  display: grid;
+  max-width: 70%;
+  margin: 0 auto;
+  gap: 2rem; /* gap-5 */
+  margin-bottom: 5rem; /* mb-20 */
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  color: white;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  place-items: center;
+}
+@media (max-width: 768px) {
+  #cards {
+    grid-template-columns: repeat(1, 1fr);
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(128, 128, 128, 0.022);
+  }
+}
+#cards img {
+  width: 250px;
+  height: 170px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  #cards img {
+    width: 200px;
+    height: 125px;
+  }
+}
+#cards p {
+  text-align: left;
+  font-weight: 100px;
+  font-size: 12px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  line-height: 22px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  #cards p {
+    width: 200px;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+#cards .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(75, 78, 81, 0.303); /* bg-slate-50 */
+  border: 1px solid white;
+  width: 280px;
+  border-radius: 5px;
+}
+#cards .card .miniCard {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  #cards .card .miniCard {
+    padding: 0;
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #cards .card {
+    width: 90%;
+  }
+}
+#cards .card h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin: 0;
+  padding: 0;
+  font-style: bold;
+  color: rgba(255, 166, 0, 0.642);
+}
+
 #table {
   background-color: #5F3C35;
-  width: 100%;
+  width: 80%;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid #888888;
+  box-shadow: 3px 3px 5px 10px #888888;
   display: flex;
   flex-direction: column;
   justify-content: center;
