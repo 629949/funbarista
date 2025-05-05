@@ -371,6 +371,7 @@ body{
     padding: 0;
     margin: 0;
     place-items: center;
+    height: 90rem;
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);

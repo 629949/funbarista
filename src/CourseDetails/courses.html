@@ -20,6 +20,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home_pin" />
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
 </head>
 <body  style="background-color: #3E2723;">
     <div id="header">
@@ -134,7 +137,7 @@
 
 
 <div id="cards">
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <img src="./images/coolCup.jpg" alt="">
 
         <div class="miniCard">
@@ -144,7 +147,7 @@
         </div>
        
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up">
         <img src="./images/cup and seeds.jpg" alt="">
 
         <div class="miniCard">
@@ -154,7 +157,7 @@
         </div>
         
       </div>
-      <div class="card" id="lastCard">
+      <div class="card" data-aos="fade-up" id="lastCard">
         <img src="./images/mathilde-langevin-fqR7P9mpSOI-unsplash.jpg" alt="">
 
         <div class="miniCard">
@@ -165,7 +168,7 @@
 
       </div>
 
-      <div class="card">
+      <div class="card"data-aos="fade-up">
         <img src="./images/don-ross-iii-x-f-YuU1nw8-unsplash.jpg" alt="">
 
         <div class="miniCard">
@@ -302,5 +305,10 @@
 
 
     <script src="./courses.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
