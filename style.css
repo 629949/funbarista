@@ -542,6 +542,7 @@ footer {
 .call {
   display: flex;
   font-size: 15px;
+  border: 1px solid;
   flex-direction: column;
 }
 @media (min-width: 320px) {
@@ -556,10 +557,19 @@ footer {
 }
 .call li {
   text-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
 }
 .call a {
   color: white;
   text-decoration: none;
+}
+
+h6 {
+  display: flex;
+  justify-content: center;
+  width: 150px;
 }
 
 .logo {
