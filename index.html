@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home_pin" />
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+
 
 
 </head>
@@ -92,17 +96,17 @@
 
     <!-- About Section -->
     <div id="cards">
-      <div class="card">
-        <img src="./images/coolCup.jpg" alt="">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200"  >
+        <img src="./images/coolCup.jpg" alt="" data-aos="zoom-in" data-aos-delay="200">
 
-        <div class="miniCard">
+        <div class="miniCard" data-aos="fade-up">
             <h4>Discover and Craft</h4>
             <p>Discover the art and science of coffee making, from brewing the perfect espresso to creating stunning latte art. Our expert-led curriculum will help you refine your skills and craft exceptional coffee with confidence 
             </p>
         </div>
        
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <img src="./images/cup and seeds.jpg" alt="">
 
         <div class="miniCard">
@@ -112,7 +116,7 @@
         </div>
         
       </div>
-      <div class="card" id="lastCard">
+      <div class="card" id="lastCard" data-aos="zoom-in" data-aos-delay="200">
         <img src="./images/mathilde-langevin-fqR7P9mpSOI-unsplash.jpg" alt="">
 
         <div class="miniCard">
@@ -123,7 +127,7 @@
 
       </div>
 
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <img src="./images/don-ross-iii-x-f-YuU1nw8-unsplash.jpg" alt="">
 
         <div class="miniCard">
@@ -133,7 +137,7 @@
       </div>
 
      
-      <button id="browseButton">
+      <button id="browseButton" data-aos="zoom-in" data-aos-delay="200">
         <a href="src/CourseDetails/courses.html">Browse Courses</a>
     </button>
 
@@ -142,7 +146,7 @@
     <!-- Featured Courses -->
 
         <h3><i class='bx bx-book' style="font-size: 55px;"></i> </h3>
-        <div class="featured" style="background-image: url(./images/unseen-studio-s9CC2SKySJM-unsplash.jpg);">
+        <div class="featured" style="background-image: url(./images/unseen-studio-s9CC2SKySJM-unsplash.jpg);" data-aos="zoom-in" data-aos-delay="200">
             <div id="courses1">
                 <h4>Start From all Levels <i class='bx bxs-tachometer'></i></h4>
              <p>  At Fun Barista Academy, we believe coffee is more than just a drink—it's an art, a craft, and a passion. Whether you're a beginner or looking to refine your skills, our expert-led courses are designed to take you on an exciting journey through the world of barista training. <br>
@@ -174,7 +178,7 @@ Start your barista journey today! 🚀</p>
             <div class="leaf">
                 <div class="call">
                     <ul>
-                        <li style="font-size: 12px; color: orange; border-bottom: 1px solid orange;" >Quick Links</li>
+                        <h6>Quick Links</h6>
                         <li><a href="#enrol">Enroll</a></li>
                         <li><a href="#">Our-Courses</a></li>
                         <li><a href="#">More</a></li>
@@ -183,14 +187,14 @@ Start your barista journey today! 🚀</p>
                 <div class="call">
                     <ul>
 
-                        <li style="font-size: 12px; color: orange; border-bottom: 1px solid orange; width: 50px;">Contact</li>
+                        <h6 >Contact</h6>
                         <li><a href="#">funbaristaacademy@gmail.com</a></li>
                         <li><a href="#">+256 702942503</a></li>
                         <li><a href="#">+256 788135448</a></li>
                     </ul>
                 </div>
                 <div class="call">
-                    <h6 style="color: orange; font-size: 15px; margin: 0; border-bottom: 1px solid orange;">Location</h6>
+                    <h6>Location</h6>
                     <p>Located at Bukoto - Kisaasi Road</p>
                 </div>
             </div>
@@ -215,5 +219,11 @@ Start your barista journey today! 🚀</p>
         </footer>
 
     <script src="./style.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
