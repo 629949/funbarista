@@ -18,13 +18,12 @@ body{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: white;
     position: sticky;
     z-index: 1000;
     top: 0;
     // padding: 10px;
     height: 60px;
-    color: black;
+    color: white;
   
   
     @media (max-width: 768px){
@@ -32,8 +31,8 @@ body{
       height: 20px;
       width:96%;
       gap: 50px;
-      background-color: black;
-      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.515);
+      justify-content: space-around;
   
     }
   
@@ -46,6 +45,7 @@ body{
       gap: 5px;
       border-radius: 12px;
       width: 280px;
+      color: white;
      
   
       @media (min-width: 320px) {
@@ -80,7 +80,7 @@ body{
       justify-content: center;
       align-items: center;
       width: 50rem;
-
+       
       
    
   
@@ -91,6 +91,7 @@ body{
         padding: 0;
         justify-content: center;
         align-items: center;
+        
   
         @media (max-width: 768px) {
           display: none;
@@ -107,7 +108,7 @@ body{
   
           a{
               text-decoration: none;
-              color: black;
+              color: white; 
               display: flex;
               align-items: center;
           
@@ -371,7 +372,7 @@ body{
     padding: 0;
     margin: 0;
     place-items: center;
-    height: 90rem;
+    height: 95rem;
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
@@ -468,12 +469,11 @@ body{
 
 #table{
    
-    background-color: #5F3C35;
+    background-color: transparent;
     width: 80%;
     height: 400px;
     border-radius: 10px;
-    border: 2px solid #888888;
-    box-shadow: 3px 3px 5px 10px #888888;
+    box-shadow: 3px 3px 5px 10px black inset;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -575,6 +575,10 @@ footer {
 
     li{
         text-wrap: wrap;
+           
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
     }
 
     a{
@@ -582,6 +586,18 @@ footer {
         text-decoration: none;
     }
 }
+
+
+h6 {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    font-size: 15px;
+    margin: 0;
+    color: orange;
+    
+}
+
 .logo{
     width: 200px;
     
@@ -619,7 +635,7 @@ footer {
     align-items: center;
     height: 5rem; /* h-20 */
     flex-direction: column;
-    border-top: 1px solid;
+  
 
     @media (min-width: 320px) {
         width: 100%;
