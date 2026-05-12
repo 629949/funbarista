@@ -1,126 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application</title>
-    <link rel="stylesheet" href="../dist/output.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="../images/FUN BARISTA (1).jpg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply | FunBarista Academy</title>
+
+  <link rel="stylesheet" href="./application.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../../images/FUN BARISTA (1).jpg" type="image/x-icon">
 </head>
-<body  >
-    <div class="flex justify-evenly align-middle  h-16 sticky top-0 text-black" style="background-color: #3E2723;">
+<body>
+  <div class="steam-bg"></div>
 
-        <div class="flex justify-center items-center space-x-3">
-            <a href="../index.html" class=" w-80 flex flex-row space-x-2"> 
-                <img src="../images/FUN BARISTA (1).jpg" alt="logo" class="w-10 h-10 rounded-full">
-                <h1 class="font-bold  flex justify-center items-center text-2xl">FunBarista Academy</h1></a>
-            
+  <header id="header">
+    <a href="../../index.html" id="topLink" aria-label="Go to homepage">
+      <img src="../../images/FUN BARISTA (1).jpg" alt="FunBarista logo">
+      <h1 id="title">FunBarista Academy</h1>
+    </a>
+
+    <nav id="nav" aria-label="Application page navigation">
+      <ul class="desktopmenu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../CourseDetails/courses.html">Programs</a></li>
+        <li><a href="#application-form">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="menuIcon">
+      <button type="button" class="menuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="dropdownMenu">
+        <i class='bx bx-menu-alt-right'></i>
+      </button>
+      <ul class="dropdown" id="dropdownMenu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../CourseDetails/courses.html">Programs</a></li>
+        <li><a href="#application-form">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-       
-        <!-- navbar -->
-        <nav class="flex w-96  justify-center items-center ">
-            <ul class="flex space-x-6">
-                <li><a href="../index.html">About</a></li>
-                <li><a href="./courses.html" class="scroll-smooth">Programs</a></li>
-                <li><a href="#footer">Contact-Us</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </nav>
-    </div>
+  </header>
 
-    <div class="flex items-center justify-center border h-screen" >
-        <div class="flex border">
-            <form action="" class="border w-full text-white rounded flex flex-col " style="background-color: #3E2723;">
-                <div class="flex flex-col">
-                <label for="" class="">First Name</label>
-                <input type="text" class="border w-56 rounded">
-                </div>
-    
-                <div class="flex  flex-col">
-                    <label for="">Last Name</label>
-                    <input type="text" class="border w-56 rounded">
-                </div>
-    
-                <div class="flex flex-col">
-                    <label for="">E-mail</label>
-                    <input type="email" class="border w-52 rounded">
-                </div>
-    
-                <div class="flex flex-col">
-                    <label for="">Contact</label>
-                    <input type="number" class="border w-52 rounded">
-                </div>
-    
-                <!-- <div class="flex border flex-col">
-                    <label for="">Intake</label>
-                    <input type="radio">
-                </div> -->
-    
-                <div class="flex flex-col">
-                    <label for="">Duration</label>
-                    <div class="space-x-5 flex justify-around">
-                        <input type="radio" class="space-x-0">Morning
-                        <input type="radio">Evening
-                    </div>
-                  
-                </div>
-    
-                <div class="border flex justify-center items-center h-40">
-                    <button class="w-40 h-10 border rounded-lg hover:scale-110 transition transform duration-300  hover:bg-black overflow-hidden"><strong>Submit Application</strong></button>
-                </div>
-            </form>
-        </div>
-       
-    </div>
-
-    <!-- footer and contact section -->
-    <footer class="border-t-black bg-black text-white h-5/6 mt-20 ">
-        <section class="flex space-x-10 justify-evenly items-center ">
-
-        <div class="space-y-5">
-            <ul>
-                <li><a href="#contact">Contact-us</a></li>
-                <li><a href="#enrol">Enroll</a></li>
-                <li><a href="#">Our-Courses</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <ul>
-                <li><a href="#" class="hover:underline">funbaristaacademy@gmail.com</a></li>
-                <li><a href="#" class="hover:underline">+256 702942503</a></li>
-                <li><a href="#" class="hover:underline">+256 788135448</a></li>
-            </ul>
-        </div>
-        
-        <img src="../images/FUN BARISTA (1).jpg" alt="logo" class="w-60 h-52">
-
-        <div class="space-x-5  space-y-5">
-
-           <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank"><i class='bx bxl-tiktok' style="font-size: 2rem;"></i></a> 
-            <i class='bx bxl-facebook-circle ' style='color:#ffffff; font-size: 2rem;'></i>
-           <a href="https://www.instagram.com/fun_barista_coffee_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> <i class='bx bxl-instagram' style="font-size: 2rem;"></i></a>
-           <a href="https://wa.me" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
-            <i class='bx bxl-whatsapp text-4xl text-green-500 hover:text-green-700'></i>
-        </a>
-        <div class="flex space-x-2">
-            <img src="../images/location.svg" alt="">
-            <p>Bukoto-Kisaasi Road</p>
-            
-        </div>
-                </div>
-
-              
+  <main>
+    <section class="hero hero-bg">
+      <p class="eyebrow">Enrollment Open</p>
+      <h2>Apply to FunBarista Academy</h2>
+      <p>Complete this form to reserve your intake slot. Our team will contact you with the next onboarding steps.</p>
+      <a class="ghost-button" href="../CourseDetails/courses.html">View Course Fees</a>
     </section>
-    <div class="bg-gray-400 flex space-x-10 justify-center items-center h-20">
-        <p>2024 Copywrite FunBarista Academy </p>
-        <p><a href="#" class="hover:underline">Privacy Policy</a></p>
 
+    <section id="application-form" class="form-wrapper">
+      <form id="admissionForm" class="form-card">
+        <h3>Application Form</h3>
+        <p class="form-intro">Enter your details accurately so we can process your registration quickly.</p>
+
+        <div class="grid-two">
+          <label>
+            First Name
+            <input type="text" name="firstName" required placeholder="Enter first name">
+          </label>
+
+          <label>
+            Last Name
+            <input type="text" name="lastName" required placeholder="Enter last name">
+          </label>
+        </div>
+
+        <div class="grid-two">
+          <label>
+            E-mail
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+
+          <label>
+            Contact Number
+            <input type="tel" name="phone" required placeholder="+256...">
+          </label>
+        </div>
+
+        <label>
+          Preferred Session
+          <div class="radio-row">
+            <label class="radio-item"><input type="radio" name="session" value="Morning" required>Morning</label>
+            <label class="radio-item"><input type="radio" name="session" value="Evening" required>Evening</label>
+          </div>
+        </label>
+
+        <label>
+          Why do you want to join?
+          <textarea name="message" rows="4" placeholder="Tell us your learning goals"></textarea>
+        </label>
+
+        <button type="submit" class="cta-button">Submit Application</button>
+        <p id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <section id="contact">
+      <div class="leaf">
+        <div class="call">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../CourseDetails/courses.html">Programs</a></li>
+            <li><a href="#application-form">Apply</a></li>
+          </ul>
+        </div>
+
+        <div class="call">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="mailto:funbaristaacademy@gmail.com">funbaristaacademy@gmail.com</a></li>
+            <li><a href="tel:+256702942503">+256 702942503</a></li>
+            <li><a href="tel:+256788135448">+256 788135448</a></li>
+          </ul>
+        </div>
+
+        <div class="call">
+          <h6>Location</h6>
+          <p>Bukoto - Kisaasi Road</p>
+        </div>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>
+        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.instagram.com/fun_barista_coffee_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="https://wa.me" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+      </div>
+    </section>
+
+    <div id="copywrite">
+      <p>2026 Copyright FunBarista Academy</p>
+      <a href="#">Privacy Policy</a>
     </div>
-    </footer>
-    
-    <script src="application.js"></script>
+  </footer>
+
+  <script src="./application.js"></script>
 </body>
 </html>
