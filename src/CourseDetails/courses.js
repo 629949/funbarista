@@ -1,3 +1,30 @@
+const SPLASH_DURATION_MS = 2800;
+
+window.addEventListener("load", () => {
+  initSplashScreen();
+});
+
+function initSplashScreen() {
+  const splash = document.getElementById("splashScreen");
+
+  if (!splash) {
+    return;
+  }
+
+  document.body.classList.add("splash-active");
+
+  window.setTimeout(() => {
+    splash.classList.add("is-hidden");
+    document.body.classList.remove("splash-active");
+
+    window.setTimeout(() => {
+      if (splash.parentNode) {
+        splash.parentNode.removeChild(splash);
+      }
+    }, 500);
+  }, SPLASH_DURATION_MS);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
   const menuButton = document.querySelector(".menuButton");

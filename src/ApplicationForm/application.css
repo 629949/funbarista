@@ -396,3 +396,138 @@ footer {
     display: block;
   }
 }
+
+/* Extra form responsiveness for smaller phones */
+@media (max-width: 640px) {
+  #header {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+
+  #topLink img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero {
+    padding: 28px 16px;
+  }
+
+  .ghost-button,
+  .cta-button {
+    width: 100%;
+  }
+
+  .radio-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-card {
+    padding: 16px;
+  }
+}
+
+/* Splash Screen */
+body.splash-active {
+  overflow: hidden;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(209, 132, 67, 0.28) 0%, transparent 36%),
+    linear-gradient(145deg, #221711 0%, #2f2119 45%, #1f1713 100%);
+  transition: opacity 420ms ease, visibility 420ms ease;
+}
+
+.splash-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-logo {
+  width: clamp(74px, 14vw, 112px);
+  height: clamp(74px, 14vw, 112px);
+  border-radius: 50%;
+  border: 3px solid rgba(247, 241, 231, 0.74);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+  animation: splashPulse 1.25s ease-in-out infinite;
+}
+
+.splash-wordmark {
+  margin: 0;
+  padding: 0 12px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  font-size: clamp(1rem, 3.4vw, 1.9rem);
+  color: var(--cream-100);
+}
+
+.splash-wordmark span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(247, 241, 231, 0.8);
+  width: 0;
+  animation: splashType 1.6s steps(20, end) 0.2s forwards, splashCaret 700ms step-end infinite;
+}
+
+@keyframes splashPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes splashType {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
+
+@keyframes splashCaret {
+  from,
+  to {
+    border-right-color: rgba(247, 241, 231, 0.8);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 520px) {
+  .splash-wordmark span {
+    white-space: normal;
+    border-right: none;
+    width: auto;
+    animation: splashWordFade 1.5s ease 0.2s both;
+  }
+
+  @keyframes splashWordFade {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
