@@ -1,4 +1,5 @@
 const SPLASH_DURATION_MS = 2800;
+const SPLASH_SESSION_KEY = "funbaristaSplashShown";
 
 window.addEventListener("load", () => {
   initSplashScreen();
@@ -9,6 +10,31 @@ function initSplashScreen() {
 
   if (!splash) {
     return;
+  }
+
+  let hasShownSplash = false;
+
+  try {
+    hasShownSplash = sessionStorage.getItem(SPLASH_SESSION_KEY) === "1";
+  } catch (error) {
+    hasShownSplash = false;
+  }
+
+  if (hasShownSplash) {
+    splash.classList.add("is-hidden");
+
+    if (splash.parentNode) {
+      splash.parentNode.removeChild(splash);
+    }
+
+    document.body.classList.remove("splash-active");
+    return;
+  }
+
+  try {
+    sessionStorage.setItem(SPLASH_SESSION_KEY, "1");
+  } catch (error) {
+    // Ignore storage failures and continue with splash behavior.
   }
 
   document.body.classList.add("splash-active");
