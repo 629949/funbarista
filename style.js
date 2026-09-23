@@ -1,184 +1,64 @@
-const SPLASH_DURATION_MS = 2800;
-const SPLASH_SESSION_KEY = "funbaristaSplashShown";
-
-window.addEventListener("load", () => {
-  initSplashScreen();
-});
-
-function initSplashScreen() {
-  const splash = document.getElementById("splashScreen");
-
-  if (!splash) {
-    return;
-  }
-
-  let hasShownSplash = false;
-
-  try {
-    hasShownSplash = sessionStorage.getItem(SPLASH_SESSION_KEY) === "1";
-  } catch (error) {
-    hasShownSplash = false;
-  }
-
-  if (hasShownSplash) {
-    splash.classList.add("is-hidden");
-
-    if (splash.parentNode) {
-      splash.parentNode.removeChild(splash);
-    }
-
-    document.body.classList.remove("splash-active");
-    return;
-  }
-
-  try {
-    sessionStorage.setItem(SPLASH_SESSION_KEY, "1");
-  } catch (error) {
-    // Ignore storage failures and continue with splash behavior.
-  }
-
-  document.body.classList.add("splash-active");
-
-  window.setTimeout(() => {
-    splash.classList.add("is-hidden");
-    document.body.classList.remove("splash-active");
-
-    window.setTimeout(() => {
-      if (splash.parentNode) {
-        splash.parentNode.removeChild(splash);
-      }
-    }, 500);
-  }, SPLASH_DURATION_MS);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.getElementById("header");
-  const menuButton = document.querySelector(".menuButton");
-  const dropdownMenu = document.getElementById("dropdownMenu");
-  const navLinks = document.querySelectorAll(".desktopmenu a[href^='#']");
-  const statCards = document.querySelectorAll(".numbers");
-  const infoCards = document.querySelectorAll(".card");
-
-  if (menuButton && dropdownMenu) {
-    menuButton.addEventListener("click", (event) => {
-      event.stopPropagation();
-      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isExpanded));
-      dropdownMenu.style.display = isExpanded ? "none" : "block";
-    });
-
-    dropdownMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        dropdownMenu.style.display = "none";
-        menuButton.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.style.display = "none";
-        menuButton.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  const onScroll = () => {
-    if (window.scrollY > 24) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+(() => {
+  'use strict';
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#main-nav');
+  const closeMenu = (focus = false) => {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation');
+    if (focus) toggle.focus();
   };
-
-  onScroll();
-  window.addEventListener("scroll", onScroll);
-
-  const observerOptions = {
-    root: null,
-    threshold: 0.35,
-    rootMargin: "-20% 0px -45% 0px"
-  };
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      navLinks.forEach((link) => {
-        const isTarget = link.getAttribute("href") === `#${entry.target.id}`;
-        link.classList.toggle("active-link", isTarget);
-      });
-    });
-  }, observerOptions);
-
-  ["cards", "courses1", "contact"].forEach((id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      sectionObserver.observe(section);
-    }
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   });
-
-  const statsObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      const card = entry.target;
-      const valueNode = card.querySelector("h3");
-      const targetValue = Number(card.dataset.count || 0);
-
-      if (valueNode && targetValue > 0) {
-        animateCount(valueNode, targetValue);
-      }
-
-      obs.unobserve(card);
+  nav.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
+  document.addEventListener('click', e => { if (!e.target.closest('.site-header')) closeMenu(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true); });
+  document.addEventListener('focusin', e => { if (!e.target.closest('.site-header')) closeMenu(); });
+  matchMedia('(min-width: 1101px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
+  const filters = document.querySelectorAll('[data-filter]');
+  filters.forEach(button => button.addEventListener('click', () => {
+    filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    let visible = 0;
+    document.querySelectorAll('[data-category]').forEach(card => {
+      card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter;
+      if (!card.hidden) visible++;
     });
-  }, { threshold: 0.5 });
-
-  statCards.forEach((card) => statsObserver.observe(card));
-
-  infoCards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-
-      const rotateY = ((x / rect.width) - 0.5) * 9;
-      const rotateX = ((y / rect.height) - 0.5) * -9;
-
-      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)";
-    });
+    document.querySelector('#filter-status').textContent = `${visible} ${visible === 1 ? 'course' : 'courses'} shown`;
+  }));
+  const goal = document.querySelector('#course-goal');
+  if (goal) goal.addEventListener('change', () => {
+    const recommendations = { beginner: ['Barista Essentials', 'A practical, three-week introduction.'], career: ['Full Programme', 'Build your professional skills over six weeks.'], art: ['Latte Art Intensive', 'Two days to focus on your pour.'], business: ['Roasting & Wholesale Intro', 'Explore the business beyond the cup in one week.'] };
+    const result = document.querySelector('#course-result');
+    const recommendation = recommendations[goal.value];
+    result.replaceChildren();
+    if (!recommendation) { result.textContent = 'A little curiosity is all you need to begin.'; return; }
+    const link = document.createElement('a');
+    link.href = 'src/ApplicationForm/Application.html?course=' + encodeURIComponent(recommendation[0]);
+    link.textContent = recommendation[0] + ' ↗';
+    result.append(link, document.createElement('br'), recommendation[1]);
   });
-});
-
-function animateCount(node, targetValue) {
-  const suffix = node.textContent.includes("%") ? "%" : (targetValue >= 1000 ? "+" : "");
-  const duration = 1200;
-  const start = performance.now();
-
-  const step = (now) => {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const current = Math.floor(targetValue * easeOutCubic(progress));
-
-    node.textContent = `${current}${suffix}`;
-
-    if (progress < 1) {
-      requestAnimationFrame(step);
-    } else if (targetValue === 4) {
-      node.textContent = "4 Levels";
-    }
-  };
-
-  requestAnimationFrame(step);
-}
-
-function easeOutCubic(t) {
-  return 1 - Math.pow(1 - t, 3);
-}
+  const form = document.querySelector('#admissionForm');
+  if (form) {
+    const course = new URLSearchParams(location.search).get('course');
+    if ([...form.elements.course.options].some(option => option.value === course)) form.elements.course.value = course;
+    const status = document.querySelector('#formStatus');
+    const options = document.querySelector('#send-options');
+    form.addEventListener('input', () => { options.hidden = true; status.textContent = ''; });
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      for (const name of ['firstName', 'lastName', 'phone']) {
+        if (!data.get(name).trim()) { status.textContent = 'Please complete all required fields.'; form.elements[name].focus(); return; }
+      }
+      const message = `Hello FunBarista Academy! I'd like to enquire about joining.\n\nName: ${data.get('firstName').trim()} ${data.get('lastName').trim()}\nEmail: ${data.get('email')}\nPhone: ${data.get('phone')}\nCourse: ${data.get('course')}\nSession: ${data.get('session')}\nLearning goals: ${data.get('message') || 'Happy to discuss.'}\n\nPlease let me know about availability and the next steps.`;
+      document.querySelector('#send-whatsapp').href = 'https://wa.me/256702942503?text=' + encodeURIComponent(message);
+      document.querySelector('#send-email').href = 'mailto:funbaristaacademy@gmail.com?subject=' + encodeURIComponent('Course enquiry: ' + data.get('course')) + '&body=' + encodeURIComponent(message);
+      status.textContent = 'Your enquiry is ready. Choose an app below, then press send there to contact the academy. Nothing has been sent yet.';
+      options.hidden = false;
+    });
+  }
+})();

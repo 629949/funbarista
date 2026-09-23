@@ -1,217 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunBarista</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/FUN BARISTA (1).jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home_pin" />
-
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hands-on barista training in Kampala. Explore coffee courses, latte art workshops and professional training at FunBarista Academy."><title>Find your craft | FunBarista Academy</title>
+<link rel="icon" href="images/FUN BARISTA (1).jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="style.js" defer>
+</script>
+<noscript><style>@media(max-width:1100px){.header-inner{flex-wrap:wrap;padding-block:15px}.menu-toggle{display:none}#main-nav{position:static;display:flex;flex-wrap:wrap;padding:0;box-shadow:none;border:0;width:100%}}</style>
+</noscript>
 </head>
-<body id="body">
-    <div id="splashScreen" class="splash-screen" aria-hidden="true">
-        <img src="./images/FUN BARISTA (1).jpg" alt="FunBarista logo" class="splash-logo">
-        <h2 class="splash-wordmark" aria-label="funbarista academy">
-            <span>funbarista academy</span>
-        </h2>
-    </div>
-    <div class="steam-bg"></div>
-
-    <header id="header">
-        <a href="#heroImage" id="topLink" aria-label="FunBarista home">
-            <img src="./images/FUN BARISTA (1).jpg" alt="FunBarista logo" id="logoImage">
-            <h1 id="title">FunBarista Academy</h1>
-        </a>
-
-        <nav id="nav" aria-label="Main Navigation">
-            <ul class="desktopmenu">
-                <li><a href="#cards">About</a></li>
-                <li><a href="#courses1">Programs</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./src/CourseDetails/courses.html">More</a></li>
-            </ul>
-        </nav>
-
-        <div class="menuIcon" id="menu">
-            <button type="button" class="menuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="dropdownMenu">
-                <i class='bx bx-menu-alt-right'></i>
-            </button>
-
-            <ul class="dropdown" id="dropdownMenu">
-                <li><a href="#cards">About</a></li>
-                <li><a href="#courses1">Programs</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./src/CourseDetails/courses.html">More</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section id="heroImage" class="hero-bg">
-            <p class="eyebrow">Certified Coffee Training in Kampala</p>
-            <h2 id="welcome">
-                <em>Fun Barista</em>
-                <span>Start your barista journey with practical skills, clear mentorship, and real cafe confidence.</span>
-            </h2>
-            <div class="hero-cta-row">
-                <a class="cta-button" href="./src/CourseDetails/courses.html">
-                    Browse Courses
-                    <i class='bx bx-right-arrow-alt'></i>
-                </a>
-                <a class="ghost-button" href="#cards">Explore Academy</a>
-            </div>
-        </section>
-
-        <section id="firstMenuBox" aria-label="Academy Highlights">
-            <div class="numbers" data-aos="zoom-in" data-aos-delay="120" data-count="95">
-                <i class='bx bx-coffee-togo'></i>
-                <h3>95%</h3>
-                <p>Hands-on practice</p>
-            </div>
-
-            <div class="numbers" data-aos="zoom-in" data-aos-delay="180" data-count="200">
-                <i class='bx bxs-group'></i>
-                <h3>200+</h3>
-                <p>Learners trained</p>
-            </div>
-
-            <div class="numbers" data-aos="zoom-in" data-aos-delay="240" data-count="100">
-                <i class='bx bx-time-five'></i>
-                <h3>100%</h3>
-                <p>Flexible schedule</p>
-            </div>
-
-            <div class="numbers" data-aos="zoom-in" data-aos-delay="300" data-count="4">
-                <i class='bx bxs-graduation'></i>
-                <h3>4 Levels</h3>
-                <p>Certification track</p>
-            </div>
-        </section>
-
-        <section id="cards">
-            <article class="card" data-aos="zoom-in" data-aos-delay="120">
-                <img src="./images/coolCup.jpg" alt="Crafting a detailed latte art cup">
-                <div class="miniCard">
-                    <h4>Discover and Craft</h4>
-                    <p>Discover the art and science of coffee making, from brewing espresso to creating latte art. Our expert curriculum helps you craft exceptional coffee with confidence.</p>
-                </div>
-            </article>
-
-            <article class="card" data-aos="zoom-in" data-aos-delay="180">
-                <img src="./images/cup and seeds.jpg" alt="Coffee cup with roasted beans">
-                <div class="miniCard">
-                    <h4>Inspire Your Creativity</h4>
-                    <p>Experience engaging classes that grow your creativity and mastery. Learn, practice, and refine your skills with direct instructor feedback.</p>
-                </div>
-            </article>
-
-            <article class="card" data-aos="zoom-in" data-aos-delay="240">
-                <img src="./images/mathilde-langevin-fqR7P9mpSOI-unsplash.jpg" alt="Students collaborating in barista class">
-                <div class="miniCard">
-                    <h4>Learn Together</h4>
-                    <p>Train in a collaborative environment with fellow learners and expert instructors. Share insights, gain experience, and deepen your coffee passion.</p>
-                </div>
-            </article>
-
-            <article class="card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="./images/don-ross-iii-x-f-YuU1nw8-unsplash.jpg" alt="Professional barista preparing coffee at a counter">
-                <div class="miniCard">
-                    <h4>Build a Career</h4>
-                    <p>Develop practical skills for cafes, entrepreneurship, and competition pathways. Our certification gives you a professional edge in the coffee industry.</p>
-                </div>
-            </article>
-
-            <a id="browseButtonSecondary" class="cta-button" href="./src/CourseDetails/courses.html" data-aos="zoom-in" data-aos-delay="140">
-                Browse Courses
-            </a>
-        </section>
-
-        <h3 class="section-icon"><i class='bx bx-book'></i></h3>
-
-        <section class="featured featured-bg" data-aos="fade-up" data-aos-delay="120">
-            <div id="courses1">
-                <h4>Start From Any Level <i class='bx bxs-tachometer'></i></h4>
-                <p>
-                    At Fun Barista Academy, coffee is more than a drink. It is craft, service, and creativity. Whether you are a beginner or improving your technique, our courses guide your growth in a clear, step-by-step way.
-                    <br><br>
-                    What you will learn:
-                    <br>
-                    1. Espresso calibration and extraction basics
-                    <br>
-                    2. Latte art technique and milk texturing
-                    <br>
-                    3. Professional workflow and equipment handling
-                    <br>
-                    4. Customer service for real-world cafe shifts
-                </p>
-            </div>
-
-            <div id="courses">
-                <p>
-                    Beginner, intermediate, or advanced, each pathway is built to sharpen your confidence and consistency. Join a practical learning community and turn passion into profession.
-                </p>
-                <a href="./src/CourseDetails/courses.html" id="seeMore">See More Courses</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <section id="contact">
-            <div class="leaf">
-                <div class="call">
-                    <h6>Quick Links</h6>
-                    <ul>
-                        <li><a href="./src/ApplicationForm/Application.html">Enroll</a></li>
-                        <li><a href="./src/CourseDetails/courses.html">Our Courses</a></li>
-                        <li><a href="#heroImage">Back to Top</a></li>
-                    </ul>
-                </div>
-                <div class="call">
-                    <h6>Contact</h6>
-                    <ul>
-                        <li><a href="mailto:funbaristaacademy@gmail.com">funbaristaacademy@gmail.com</a></li>
-                        <li><a href="tel:+256702942503">+256 702942503</a></li>
-                        <li><a href="tel:+256788135448">+256 788135448</a></li>
-                    </ul>
-                </div>
-                <div class="call">
-                    <h6>Location</h6>
-                    <p>Located at Bukoto - Kisaasi Road</p>
-                </div>
-            </div>
-
-            <div class="socials">
-                <a href="https://www.tiktok.com/@funbaristacoffe?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>
-                <a href="#" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://www.instagram.com/fun_barista_coffee_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-                <a href="https://wa.me" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#" aria-label="Location">
-                    <span class="material-symbols-outlined">home_pin</span>
-                </a>
-            </div>
-        </section>
-
-        <div id="copywrite">
-            <p>2026 Copyright FunBarista Academy</p>
-            <a href="#">Privacy Policy</a>
-        </div>
-    </footer>
-
-    <script src="./style.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 700,
-        easing: 'ease-out-cubic',
-        once: true
-      });
-    </script>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement">A little curiosity. A whole world of coffee. <a href="src/CourseDetails/courses.html">Find your course <span aria-hidden="true">↗</span></a>
+</div>
+<header class="site-header">
+<div class="container header-inner"><a class="brand" href="index.html" aria-label="FunBarista Academy home"><img src="images/FUN BARISTA (1).jpg" width="45" height="45" alt=""><span>funbarista<span class="brand-small">COFFEE ACADEMY</span></span></a><button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation"><i class="bx bx-menu" aria-hidden="true"></i></button>
+<nav id="main-nav" aria-label="Main navigation"><a href="index.html#about">Our story</a><a href="src/CourseDetails/courses.html">Our courses</a><a href="index.html#experience">The experience</a><a href="#contact">Get in touch</a><a class="button small" href="src/ApplicationForm/Application.html">Start your journey <i class="bx bx-arrow-up-right" aria-hidden="true"></i></a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero container">
+<div class="hero-copy">
+<p class="eyebrow"><span class="tiny-line"></span> ROOTED IN KAMPALA. BREWED WITH PASSION.</p>
+<h1>A love for coffee.<br>A skill for <em>life.</em>
+</h1>
+<p class="lead">From your first pour to your own café.<br>Learn the craft, find your confidence, and turn your love for coffee into something more.</p>
+<div class="hero-actions"><a class="button" href="src/CourseDetails/courses.html">Explore our courses <span>↗</span></a><a class="text-link" href="#about">Meet the academy <span>↘</span></a>
+</div>
+<div class="hero-note"><span class="note-icon">✳</span>
+<p>Real machines. Real practice.<br><strong>Your next chapter starts here.</strong>
+</p>
+</div>
+</div>
+<div class="hero-visual"><img class="hero-photo" src="images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg" alt="Warm light on an espresso machine pouring freshly brewed coffee" fetchpriority="high">
+<div class="round-stamp"><span>LEARN • CREATE • CONNECT</span><i class="bx bx-coffee" aria-hidden="true"></i><span>THE FUNBARISTA WAY</span>
+</div>
+<div class="photo-caption"><span>THE ART IS IN THE EVERYDAY.</span><span>01 / THE PERFECT EXTRACTION</span>
+</div>
+<div class="location-label"><i class="bx bx-map" aria-hidden="true"></i> Your coffee journey, in Kampala</div>
+</div>
+</section>
+<div class="values-strip">
+<div class="container"><span><i class="bx bx-coffee" aria-hidden="true"></i> Hands-on, from day one</span><span><i class="bx bx-user-voice" aria-hidden="true"></i> Learn with expert guidance</span><span><i class="bx bx-sun" aria-hidden="true"></i> Morning & evening sessions</span><span><i class="bx bx-heart" aria-hidden="true"></i> A community that cares</span>
+</div>
+</div>
+<section class="section container" id="courses">
+<div class="section-heading">
+<div>
+<p class="eyebrow">FIND YOUR STARTING POINT</p>
+<h2>Big dreams. <em>Small beginnings.</em>
+</h2>
+</div><a class="text-link" href="src/CourseDetails/courses.html">View all courses ↗</a>
+</div>
+<p class="section-intro">A fresh start, a new skill, or your next big move. There’s a place for you here.</p>
+<div class="course-grid">
+<article class="course-card" data-category="career"><a class="course-image" href="src/ApplicationForm/Application.html?course=Full%20Programme"><img src="images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg" alt="Espresso being prepared on a coffee machine" loading="lazy"><span class="image-tag">THE COMPLETE JOURNEY</span><span class="image-arrow">↗</span></a>
+<div class="course-content">
+<div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 6 weeks</span><span>Career pathway</span>
+</div>
+<h3><a href="src/ApplicationForm/Application.html?course=Full%20Programme">Professional Barista</a>
+</h3>
+<p>From your first espresso to a confident café workflow. Build a complete foundation in the craft of coffee.</p>
+<div class="course-bottom"><span>UGX <strong>1,300,000</strong></span><a href="src/ApplicationForm/Application.html?course=Full%20Programme" aria-label="Explore Professional Barista">Explore course ↗</a>
+</div>
+</div>
+</article>
+<article class="course-card" data-category="beginner"><a class="course-image" href="src/ApplicationForm/Application.html?course=Barista%20Essentials"><img src="images/cup and seeds.jpg" alt="Roasted coffee beans and a portafilter" loading="lazy"><span class="image-tag">START HERE</span><span class="image-arrow">↗</span></a>
+<div class="course-content">
+<div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 3 weeks</span><span>Beginner friendly</span>
+</div>
+<h3><a href="src/ApplicationForm/Application.html?course=Barista%20Essentials">Barista Essentials</a>
+</h3>
+<p>Start with the essentials. Get comfortable with the machine, the milk, and the rhythm behind the counter.</p>
+<div class="course-bottom"><span>UGX <strong>800,000</strong></span><a href="src/ApplicationForm/Application.html?course=Barista%20Essentials" aria-label="Explore Barista Essentials">Explore course ↗</a>
+</div>
+</div>
+</article>
+<article class="course-card" data-category="workshop"><a class="course-image" href="src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive"><img src="images/mathilde-langevin-fqR7P9mpSOI-unsplash.jpg" alt="Coffee served in a ceramic cup" loading="lazy"><span class="image-tag">A CREATIVE DEEP DIVE</span><span class="image-arrow">↗</span></a>
+<div class="course-content">
+<div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 2 days</span><span>Workshop</span>
+</div>
+<h3><a href="src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive">Latte Art Intensive</a>
+</h3>
+<p>A little patience. A steady hand. Explore milk texture and pouring techniques that make every cup your own.</p>
+<div class="course-bottom"><span>UGX <strong>150,000</strong></span><a href="src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive" aria-label="Explore Latte Art Intensive">Explore course ↗</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="story-section" id="about">
+<div class="container story-grid">
+<div class="story-photo"><img src="images/cup and seeds.jpg" alt="Roasted coffee beans surrounding an espresso portafilter" loading="lazy">
+<div class="story-label">A little science.<br><em>A lot of soul.</em>
+</div>
+</div>
+<div class="story-copy">
+<p class="eyebrow">MORE THAN A COFFEE SCHOOL</p>
+<h2>Good coffee.<br>Even better <em>possibilities.</em>
+</h2>
+<p>There’s something special about making a cup that makes someone’s day. At FunBarista, that’s where we start.</p>
+<p>Our academy on Bukoto – Kisaasi Road brings curious people together around a shared love of coffee. With guided practice and space to experiment, you’ll learn the why behind every grind, pour, and extraction.</p>
+<div class="story-signoff"><i class="bx bx-leaf" aria-hidden="true"></i><span>Built on craft.<br><strong>Grown through community.</strong></span>
+</div><a class="text-link" href="src/ApplicationForm/Application.html">Come find your people ↗</a>
+</div>
+</div>
+</section>
+<section class="section container" id="experience">
+<div class="section-heading">
+<div>
+<p class="eyebrow">LESS WATCHING. MORE DOING.</p>
+<h2>Get your hands <em>coffee-ready.</em>
+</h2>
+</div>
+<p class="heading-aside">The best way to learn the craft?<br>Step behind the machine.</p>
+</div>
+<div class="experience-grid">
+<article><span class="step-number">01</span><i class="bx bx-coffee" aria-hidden="true"></i>
+<h3>Learn the foundations</h3>
+<p>Understand your beans, dial in your grind, and discover what makes a balanced espresso.</p>
+</article>
+<article><span class="step-number">02</span><i class="bx bx-palette" aria-hidden="true"></i>
+<h3>Make it your own</h3>
+<p>Steam, swirl, pour, repeat. Develop your technique with direct feedback and room to experiment.</p>
+</article>
+<article><span class="step-number">03</span><i class="bx bx-store" aria-hidden="true"></i>
+<h3>Take it into the world</h3>
+<p>Bring confident service and a smooth workflow to your next café role or business idea.</p>
+</article>
+</div>
+</section>
+<section class="finder-section">
+<div class="container finder-inner">
+<div>
+<p class="eyebrow">YOUR NEXT CHAPTER</p>
+<h2>What’s brewing <em>for you?</em>
+</h2>
+<p>Tell us where you want to go. We’ll help you find a starting point.</p>
+</div>
+<div class="finder-controls"><label for="course-goal">I want to…</label><select id="course-goal"><option value="">Choose your coffee goal</option><option value="beginner">Learn the basics</option><option value="career">Build a career in coffee</option><option value="art">Improve my latte art</option><option value="business">Explore roasting & business</option></select>
+<div id="course-result" aria-live="polite">A little curiosity is all you need to begin.</div>
+</div>
+</div>
+</section>
+<section class="section container faq-section">
+<div>
+<p class="eyebrow">A FEW THINGS YOU MIGHT BE WONDERING</p>
+<h2>Let’s clear <em>things up.</em>
+</h2>
+<p>Still curious? We’re always happy to talk.</p><a class="text-link" href="https://wa.me/256702942503" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp ↗</a>
+</div>
+<div class="faq-list">
+<details><summary>Do I need any experience?<span>+</span></summary>
+<p>No experience is needed for Barista Essentials. We start with the fundamentals and build your confidence through practice. Contact us if you’re unsure which course fits.</p>
+</details>
+<details><summary>When do classes take place?<span>+</span></summary>
+<p>Classes run Monday to Saturday. Morning sessions are 8:00am–1:30pm and evening sessions are 2:00pm–5:30pm. Contact the academy to confirm the next intake.</p>
+</details>
+<details><summary>Where is the academy?<span>+</span></summary>
+<p>You’ll find us on Bukoto – Kisaasi Road in Kampala, Uganda. Call +256 702 942 503 for directions before visiting.</p>
+</details>
+<details><summary>How do I join?<span>+</span></summary>
+<p>Choose your course and complete the enquiry form. You can then send your details to the academy by WhatsApp or email to confirm availability and registration. The registration fee is UGX 50,000.</p>
+</details>
+</div>
+</section>
+<section class="cta-section container"><span class="eyebrow">YOUR FIRST GREAT CUP IS WAITING</span>
+<h2>Let’s make something <em>good.</em>
+</h2><a class="button cream" href="src/ApplicationForm/Application.html">Start your journey ↗</a><span class="cta-doodle" aria-hidden="true">☕</span>
+</section>
+</main>
+<footer id="contact">
+<div class="container footer-grid">
+<div><a class="brand" href="index.html"><i class="bx bx-coffee" aria-hidden="true"></i><span>funbarista<span class="brand-small">COFFEE ACADEMY</span></span></a>
+<p>Good coffee starts with curious people.<br>Find your craft with us in Kampala.</p>
+<div class="socials"><a href="https://www.instagram.com/fun_barista_coffee_academy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bx-camera" aria-hidden="true"></i></a><a href="https://www.tiktok.com/@funbaristacoffe" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bx bxl-tiktok" aria-hidden="true"></i></a><a href="https://wa.me/256702942503" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bx bxl-whatsapp" aria-hidden="true"></i></a>
+</div>
+</div>
+<div>
+<h3>Come explore</h3><a href="index.html#about">Our story</a><a href="src/CourseDetails/courses.html">Courses & fees</a><a href="src/ApplicationForm/Application.html">Apply to the academy</a>
+</div>
+<div>
+<h3>Let's talk coffee</h3><a href="tel:+256702942503">+256 702 942 503</a><a href="tel:+256788135448">+256 788 135 448</a><a href="mailto:funbaristaacademy@gmail.com">funbaristaacademy@gmail.com</a>
+</div>
+<div>
+<h3>Find the academy</h3>
+<p>Bukoto – Kisaasi Road<br>Kampala, Uganda</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Fun+Barista+Academy+Bukoto+Kampala" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+</div>
+</div>
+<div class="container footer-bottom"><span>© 2026 FunBarista Academy</span><span>Crafted with a love for coffee.</span><a href="#">Back to top ↑</a>
+</div>
+</footer>
 </body>
 </html>
