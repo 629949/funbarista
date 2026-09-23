@@ -1417,3 +1417,200 @@ fieldset {
     break-inside:avoid
   }
 }
+
+/* Motion: short, purposeful transitions with readable fallbacks. */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+}
+html:not(.aos-enabled) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+html.aos-enabled [data-aos="fade-up"] {
+  transform: translate3d(0, 24px, 0);
+}
+html.aos-enabled [data-aos="fade-up"].aos-animate {
+  transform: none;
+}
+[data-aos]:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  pointer-events: auto !important;
+}
+#main-nav > a:not(.button), .text-link, .course-bottom a,
+.footer-grid > div > a:not(.brand), .footer-bottom a {
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 300ms var(--motion-ease), color 200ms;
+}
+.text-link {
+  border-bottom-color: transparent;
+  background-image: linear-gradient(currentColor, currentColor), linear-gradient(var(--line), var(--line));
+  background-size: 0 1px, 100% 1px;
+}
+#main-nav > a:not(.button):is(:hover, :focus-visible),
+.course-bottom a:is(:hover, :focus-visible),
+.footer-grid > div > a:not(.brand):is(:hover, :focus-visible),
+.footer-bottom a:is(:hover, :focus-visible) {
+  background-size: 100% 1px;
+}
+.text-link:is(:hover, :focus-visible) {
+  background-size: 100% 1px, 100% 1px;
+}
+.button, .image-arrow, .socials a, .filter-bar button {
+  transition: background-color 250ms, color 250ms, border-color 250ms,
+    transform 300ms var(--motion-ease), box-shadow 300ms var(--motion-ease);
+}
+.button > :is(span, i), .text-link > span {
+  transition: transform 300ms var(--motion-ease);
+}
+.button:is(:hover, :focus-visible) > :is(span, i),
+.text-link:is(:hover, :focus-visible) > span {
+  transform: translate(3px, -2px);
+}
+.button:active, .filter-bar button:active {
+  transform: translateY(1px) scale(.98);
+}
+.course-image:is(:hover, :focus-visible) .image-arrow {
+  background: var(--rust);
+  color: white;
+  transform: rotate(45deg);
+}
+.socials a:is(:hover, :focus-visible) {
+  background: var(--cream);
+  color: var(--ink);
+  transform: translateY(-3px);
+}
+.disclosure-content {
+  display: flow-root;
+}
+.disclosure-content > :last-child {
+  margin-bottom: 22px;
+}
+summary {
+  transition: color 200ms, background-color 200ms;
+  min-height: 60px;
+  align-items: center;
+}
+summary:is(:hover, :focus-visible), details[data-expanded="true"] > summary {
+  color: var(--rust);
+}
+summary span {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #a747290b;
+  transition: transform 300ms var(--motion-ease), background-color 200ms;
+}
+details[data-expanded="true"] summary span {
+  transform: rotate(45deg);
+  background: #a7472916;
+}
+details[data-expanded="false"] summary span {
+  transform: rotate(0);
+}
+.hero-photo { object-position: 50% 48%; }
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  background: linear-gradient(transparent, #241b1480);
+  border-radius: 0 0 3px 3px;
+  pointer-events: none;
+}
+.photo-caption { z-index: 1; }
+.story-photo { border-radius: 3px 3px 120px 3px; overflow: hidden; }
+.story-photo::after {
+  content: '';
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(transparent, #241b14a6);
+  pointer-events: none;
+}
+.story-label { z-index: 1; }
+.course-image img { object-position: 50% 56%; }
+.course-card[data-category="career"] .course-image img { object-position: 50% 43%; }
+.course-card[data-category="workshop"] .course-image img { object-position: 50% 60%; }
+.hero-copy, .hero-visual, .course-card, .story-copy, .finder-controls,
+.application-intro, .form-wrapper { min-width: 0; }
+.footer-bottom > span:nth-child(2) { display: inline; }
+@media (hover: hover) and (pointer: fine) {
+  html.aos-enabled .course-card[data-aos].aos-animate:hover { transform: translateY(-5px); }
+}
+@media (max-width: 1100px) {
+  #main-nav {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transition: opacity 200ms ease, transform 250ms var(--motion-ease), visibility 250ms;
+  }
+  #main-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .menu-toggle i { transition: transform 250ms var(--motion-ease); }
+  .menu-toggle[aria-expanded="true"] i { transform: rotate(90deg); }
+  #main-nav > a { min-height: 44px; }
+  #main-nav .button { flex-shrink: 0; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .course-grid:not(.catalog-grid) .course-card:last-child { grid-column: 1 / -1; max-width: calc((100% - 22px) / 2); justify-self: center; }
+  .course-content h3 { font-size: 27px; }
+  .course-content > p { font-size: 13px; }
+  .course-image img { height: 245px; }
+  .course-bottom { font-size: 11px; }
+}
+@media (max-width: 600px) {
+  html.aos-enabled [data-aos][data-aos] {
+    transition-duration: 450ms;
+    transition-delay: 0ms;
+  }
+  html.aos-enabled [data-aos="fade-up"] { transform: translate3d(0, 14px, 0); }
+  html.aos-enabled [data-aos="fade-up"].aos-animate { transform: none; }
+  .hero-visual::after { left: 0; }
+  .hero-photo { height: clamp(365px, 110vw, 510px); object-position: 50% 46%; }
+  .story-photo, .story-photo > img { border-radius: 3px 3px 85px 3px; }
+  .story-photo > img { height: 390px; object-position: 50% 38%; }
+  .hero-actions { flex-wrap: wrap; gap: 14px 22px; }
+  .hero-actions .text-link, .course-bottom a { min-height: 44px; }
+  .course-image img, .catalog-grid .course-image img { height: clamp(240px, 70vw, 340px); }
+  .filter-bar button { min-height: 44px; }
+  .socials a { width: 44px; height: 44px; }
+  .footer-bottom { align-items: start; }
+  .footer-bottom > span:nth-child(2) { order: 3; flex-basis: 100%; }
+}
+@media (hover: none) {
+  .course-card:hover, .button:hover { transform: none; }
+  .course-card:hover .course-image img { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.aos-enabled [data-aos][data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    pointer-events: auto !important;
+  }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media print {
+  html.aos-enabled [data-aos][data-aos] { opacity: 1 !important; transform: none !important; }
+}

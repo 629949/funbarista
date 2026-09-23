@@ -9,10 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../../vendor/aos/aos.css">
 <link rel="stylesheet" href="../../style.css">
+<script src="../../vendor/aos/aos.js" defer></script>
 <script src="../../style.js" defer>
 </script>
-<noscript><style>@media(max-width:1100px){.header-inner{flex-wrap:wrap;padding-block:15px}.menu-toggle{display:none}#main-nav{position:static;display:flex;flex-wrap:wrap;padding:0;box-shadow:none;border:0;width:100%}}</style>
+<noscript><style>@media(max-width:1100px){.header-inner{flex-wrap:wrap;padding-block:15px}.menu-toggle{display:none}#main-nav{visibility:visible;opacity:1;transform:none;pointer-events:auto;max-height:none;position:static;display:flex;flex-wrap:wrap;padding:0;box-shadow:none;border:0;width:100%}}</style>
 </noscript>
 </head>
 <body><a class="skip-link" href="#main">Skip to content</a>
@@ -37,53 +39,61 @@
 <p id="filter-status" class="sr-only" aria-live="polite">
 </p>
 <div class="course-grid catalog-grid">
-<article class="course-card" data-category="career"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Full%20Programme"><img src="../../images/jakub-zerdzicki-A_90G6Ta56A-unsplash.jpg" alt="Espresso being prepared on a coffee machine" loading="lazy"><span class="image-tag">THE COMPLETE JOURNEY</span><span class="image-arrow">↗</span></a>
+<article class="course-card" data-category="career"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Full%20Programme"><img src="../../images/barista-at-work-1200.webp" srcset="../../images/barista-at-work-640.webp 640w, ../../images/barista-at-work-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) 45vw, 600px" alt="Barista preparing coffee beside a professional espresso machine" loading="lazy" width="1200" height="1800" decoding="async"><span class="image-tag">THE COMPLETE JOURNEY</span><span class="image-arrow">↗</span></a>
 <div class="course-content">
 <div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 6 weeks</span><span>Career pathway</span>
 </div>
 <h3><a href="../../src/ApplicationForm/Application.html?course=Full%20Programme">Professional Barista</a>
 </h3>
 <p>From your first espresso to a confident café workflow. Build a complete foundation in the craft of coffee.</p>
-<details><summary>What you’ll learn <span>+</span></summary><ul><li>Espresso extraction & calibration</li><li>Milk texturing & drink development</li><li>Café operations & job preparation</li></ul>
+<details><summary>What you’ll learn <span aria-hidden="true">+</span></summary>
+<div class="disclosure-content"><ul><li>Espresso extraction & calibration</li><li>Milk texturing & drink development</li><li>Café operations & job preparation</li></ul>
+</div>
 </details>
 <div class="course-bottom"><span>UGX <strong>1,300,000</strong></span><a href="../../src/ApplicationForm/Application.html?course=Full%20Programme" aria-label="Explore Professional Barista">Apply now ↗</a>
 </div>
 </div>
 </article>
-<article class="course-card" data-category="beginner"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Barista%20Essentials"><img src="../../images/cup and seeds.jpg" alt="Roasted coffee beans and a portafilter" loading="lazy"><span class="image-tag">START HERE</span><span class="image-arrow">↗</span></a>
+<article class="course-card" data-category="beginner"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Barista%20Essentials"><img src="../../images/espresso-machine-1200.webp" srcset="../../images/espresso-machine-640.webp 640w, ../../images/espresso-machine-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) 45vw, 600px" alt="Fresh espresso being extracted into a cup" loading="lazy" width="1200" height="801" decoding="async"><span class="image-tag">START HERE</span><span class="image-arrow">↗</span></a>
 <div class="course-content">
 <div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 3 weeks</span><span>Beginner friendly</span>
 </div>
 <h3><a href="../../src/ApplicationForm/Application.html?course=Barista%20Essentials">Barista Essentials</a>
 </h3>
 <p>Start with the essentials. Get comfortable with the machine, the milk, and the rhythm behind the counter.</p>
-<details><summary>What you’ll learn <span>+</span></summary><ul><li>Coffee & espresso fundamentals</li><li>Milk technique</li><li>Customer service basics</li></ul>
+<details><summary>What you’ll learn <span aria-hidden="true">+</span></summary>
+<div class="disclosure-content"><ul><li>Coffee & espresso fundamentals</li><li>Milk technique</li><li>Customer service basics</li></ul>
+</div>
 </details>
 <div class="course-bottom"><span>UGX <strong>800,000</strong></span><a href="../../src/ApplicationForm/Application.html?course=Barista%20Essentials" aria-label="Explore Barista Essentials">Apply now ↗</a>
 </div>
 </div>
 </article>
-<article class="course-card" data-category="workshop"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive"><img src="../../images/mathilde-langevin-fqR7P9mpSOI-unsplash.jpg" alt="Coffee served in a ceramic cup" loading="lazy"><span class="image-tag">A CREATIVE DEEP DIVE</span><span class="image-arrow">↗</span></a>
+<article class="course-card" data-category="workshop"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive"><img src="../../images/latte-art-1200.webp" srcset="../../images/latte-art-640.webp 640w, ../../images/latte-art-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) 45vw, 600px" alt="Close-up of a barista pouring a latte art pattern" loading="lazy" width="1200" height="1705" decoding="async"><span class="image-tag">A CREATIVE DEEP DIVE</span><span class="image-arrow">↗</span></a>
 <div class="course-content">
 <div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 2 days</span><span>Workshop</span>
 </div>
 <h3><a href="../../src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive">Latte Art Intensive</a>
 </h3>
 <p>A little patience. A steady hand. Explore milk texture and pouring techniques that make every cup your own.</p>
-<details><summary>What you’ll learn <span>+</span></summary><ul><li>Silky microfoam</li><li>Pouring technique</li><li>Creative presentation</li></ul>
+<details><summary>What you’ll learn <span aria-hidden="true">+</span></summary>
+<div class="disclosure-content"><ul><li>Silky microfoam</li><li>Pouring technique</li><li>Creative presentation</li></ul>
+</div>
 </details>
 <div class="course-bottom"><span>UGX <strong>150,000</strong></span><a href="../../src/ApplicationForm/Application.html?course=Latte%20Art%20Intensive" aria-label="Explore Latte Art Intensive">Apply now ↗</a>
 </div>
 </div>
 </article>
-<article class="course-card" data-category="workshop"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Roasting%20%26%20Wholesale%20Intro"><img src="../../images/don-ross-iii-x-f-YuU1nw8-unsplash.jpg" alt="Coffee sign outside a café" loading="lazy"><span class="image-tag">BEYOND THE CUP</span><span class="image-arrow">↗</span></a>
+<article class="course-card" data-category="workshop"><a class="course-image" href="../../src/ApplicationForm/Application.html?course=Roasting%20%26%20Wholesale%20Intro"><img src="../../images/roasted-coffee-1200.webp" srcset="../../images/roasted-coffee-640.webp 640w, ../../images/roasted-coffee-1200.webp 1200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) 45vw, 600px" alt="Roasted coffee beans surrounding a portafilter" loading="lazy" width="1200" height="1500" decoding="async"><span class="image-tag">BEYOND THE CUP</span><span class="image-arrow">↗</span></a>
 <div class="course-content">
 <div class="course-meta"><span><i class="bx bx-time-five" aria-hidden="true"></i> 1 week</span><span>Business & roasting</span>
 </div>
 <h3><a href="../../src/ApplicationForm/Application.html?course=Roasting%20%26%20Wholesale%20Intro">Roasting & Wholesale</a>
 </h3>
 <p>Follow the journey beyond the cup, from green coffee and roast profiles to the business of supplying coffee.</p>
-<details><summary>What you’ll learn <span>+</span></summary><ul><li>Green coffee introduction</li><li>Basic roasting profiles</li><li>Wholesale relationships</li></ul>
+<details><summary>What you’ll learn <span aria-hidden="true">+</span></summary>
+<div class="disclosure-content"><ul><li>Green coffee introduction</li><li>Basic roasting profiles</li><li>Wholesale relationships</li></ul>
+</div>
 </details>
 <div class="course-bottom"><span>UGX <strong>500,000</strong></span><a href="../../src/ApplicationForm/Application.html?course=Roasting%20%26%20Wholesale%20Intro" aria-label="Explore Roasting & Wholesale">Apply now ↗</a>
 </div>
@@ -125,7 +135,7 @@
 <p>Bukoto – Kisaasi Road<br>Kampala, Uganda</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Fun+Barista+Academy+Bukoto+Kampala" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
 </div>
 </div>
-<div class="container footer-bottom"><span>© 2026 FunBarista Academy</span><span>Crafted with a love for coffee.</span><a href="#">Back to top ↑</a>
+<div class="container footer-bottom"><span>© 2026 FunBarista Academy</span><span>Photos: <a href="https://www.pexels.com/@chevanon/" target="_blank" rel="noopener noreferrer">Chevanon</a> &amp; <a href="https://www.pexels.com/@masudriguez/" target="_blank" rel="noopener noreferrer">Masud / Pexels ↗</a></span><a href="#">Back to top ↑</a>
 </div>
 </footer>
 </body>
